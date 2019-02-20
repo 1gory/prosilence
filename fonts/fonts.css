@@ -1,0 +1,45 @@
+/* Oswald */
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url("./Oswald/Oswald-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Oswald-Medium";
+  src: url("./Oswald/Oswald-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+
+/* Exo2 */
+@font-face {
+  font-family: "Exo2-Regular";
+  src: url("./exo-2/Exo2-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Exo2-Medium";
+  src: url("./exo-2/Exo2-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Exo2-SemiBold";
+  src: url("./exo-2/Exo2-SemiBold.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Exo2-Bold";
+  src: url("./exo-2/Exo2-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}

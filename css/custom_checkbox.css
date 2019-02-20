@@ -1,0 +1,28 @@
+.custom-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 52px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .custom-checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    background-color: #eee; }
+  .custom-checkbox input:checked ~ .checkmark {
+    background-image: url("../img/icons/Evericons-used/check-mark-blue.svg");
+    background-position: center 5px; }
+
+/*# sourceMappingURL=custom_checkbox.css.map */

@@ -1,0 +1,238 @@
+body
+  margin: 0
+  
+
+.menu
+  position: fixed
+  top: 30px
+  left: 0
+  width: 100%
+  
+  &-logo
+    width: 118px
+    height: 66px
+    
+  &-icon
+    height: 18px
+    
+  &-social
+    text-align: right
+    
+    &__icon
+      margin-left: 18px  
+      &:hover
+        opacity: 0.5  
+      
+    &__phone
+      font-family: 'Exo2-Medium', sans-serif
+      font-size: 16px
+      color: white
+      text-decoration: none
+      vertical-align: middle
+      margin-right: 26px
+      margin-left: 10px
+      &:hover
+        opacity: 0.5
+        color: white
+        text-decoration: none
+
+  &-list
+    padding: 0
+    li
+      display: inline-block
+      font-size: 16px
+      margin-right: 40px
+      font-family: 'Oswald-Regular', sans-serif
+      margin-bottom: 15px
+      a
+        text-decoration: none
+        color: white
+        &:hover
+          opacity: 0.5 
+      &.no-margin
+        margin: 0  
+       
+.no-padding
+  padding: 0
+  
+    
+.header-wrapper
+  height: 660px
+  width: 100%
+  background-image: url('../img/hero.jpg')
+  background-size: cover
+  background-position: center center
+  
+.header
+  top: 185px
+  position: relative
+  
+  &-form
+    height: 575px
+    background-color: white
+    padding: 40px
+    box-shadow: 0px 15px 50px 0 rgba(0, 0, 0, 0.15)
+
+  &-input
+    border: 1px solid rgba(30, 35, 42, 0.15)
+    margin-bottom: 15px
+    position: relative
+        
+    &__label
+      display: block
+      font-size: 11px
+      font-family: 'Exo2-Bold', sans-serif 
+      text-transform: uppercase
+      color: #1e2229
+      position: absolute
+      padding-left: 20px
+      top: 15px
+      
+    &__text
+      opacity: 0.3
+      color: rgb(30, 34, 41)
+      border: none
+      width: 100%
+      height: 75px
+      padding-top: 15px
+      font-family: 'Exo2-Regular', sans-serif 
+      font-size: 16px
+      padding-left: 20px
+      padding-right: 20px
+      &.select
+        -webkit-appearance: none 
+        -moz-appearance: none
+        appearance: none
+  &-checkbox
+    font-size: 16px
+    font-family: 'Exo2-Regular', sans-serif 
+    padding-top: 4px
+    
+  &-checkbox__small
+    font-size: 14px
+    font-family: 'Exo2-Regular', sans-serif 
+    
+    .checkmark
+      height: 24px
+      width: 24px
+      background-position: center center
+      
+    input:checked ~ .checkmark 
+      background-position: center 1px
+      
+  &-button
+    background-color: #2889f0
+    border: none
+    color: white
+    font-family: 'Exo2-Regular', sans-serif 
+    font-size: 16px
+    text-align: center
+    width: 100%
+    padding: 23px
+    margin-top: 10px
+    margin-bottom: 20px
+    
+  &-text
+    font-family: 'Oswald-Medium', sans-serif  
+    font-size: 48px
+    letter-spacing: 1.2px
+    color: white
+    text-transform: uppercase
+    margin-top: 40px
+    margin-bottom: 140px
+    
+  &-cards
+    display: flex
+    justify-content: space-between
+    
+  &-card
+    width: 135px
+    &__icon
+      height: 36px
+      width: 36px
+      display: block
+      margin-bottom: 50px
+      
+    &__text
+      display: block
+      font-family: 'Exo2-Medium', sans-serif
+      font-size: 16px
+      color: white
+      
+      
+.margin-30
+  margin-bottom: 30px
+  
+  
+.section-header
+  color: white
+  font-size: 36px
+  font-family: 'Oswald-Regular', sans-serif
+  text-align: center
+  text-transform: uppercase
+  
+  
+.prices
+  background-color: #1e232a
+  padding-top: 160px
+  padding-bottom: 100px
+  
+  &-cards
+    margin-top: 90px
+  
+  &-card
+    border: 2px solid rgba(255, 255, 255, 0.1)
+    text-align: center
+    padding-top: 40px
+    position: relative
+    height: 600px
+    
+    &__header
+      color: white
+      font-family: 'Exo2-Bold', sans-serif 
+      font-size: 18px
+      margin-bottom: 20px
+    &__subheader
+      color: white
+      font-family: 'Exo2-Regular', sans-serif 
+      font-size: 16px
+      opacity: 0.3
+      margin-bottom: 30px 
+    &__price
+      color: #ff4657
+      font-family: 'Exo2-Regular', sans-serif 
+      font-size: 22px
+      margin-bottom: 50px
+      
+    &__list
+      list-style: none
+      padding-left: 0
+      li
+        margin-bottom: 19px 
+        span
+          color: white
+          font-family: 'Exo2-Regular', sans-serif 
+          font-size: 16px
+          padding: 15px
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+      li:last-child span
+          border-bottom: none
+        
+    &__button
+      background: white
+      padding: 12px 35px 
+      border: none
+      font-family: 'Exo2-Regular', sans-serif 
+      font-size: 16px
+      position: relative
+      bottom: -24px
+      
+    &__background
+      background: rgba(255, 255, 255, 0.03)  
+      border: none
+          
+      
+          
+  
+  
+  
