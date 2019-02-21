@@ -491,4 +491,21 @@ body {
   .header-input.dark select {
     color: rgba(255, 255, 255, 0.3); }
 
+.about {
+  padding-top: 170px;
+  padding-bottom: 260px;
+  position: relative; }
+  .about-img {
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+    position: absolute;
+    top: 170px;
+    left: 0; }
+  .about-text {
+    color: white;
+    font-size: 16px;
+    font-family: "Exo2-Regular", sans-serif;
+    line-height: 1.88; }
+
 /*# sourceMappingURL=index.css.map */
