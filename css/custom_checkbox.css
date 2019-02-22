@@ -20,7 +20,8 @@
     left: 0;
     height: 32px;
     width: 32px;
-    background-color: #eee; }
+    background-color: #eee;
+    border: 1px solid #353940; }
   .custom-checkbox input:checked ~ .checkmark {
     background-image: url("../img/icons/Evericons-used/check-mark-blue.svg");
     background-position: center 5px; }
