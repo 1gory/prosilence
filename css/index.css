@@ -313,10 +313,17 @@ body {
   .example-img {
     height: 480px;
     width: 100%;
-    object-fit: contain; }
+    object-fit: cover; }
     @media screen and (max-width: 991px) {
       .example-img {
         height: auto; } }
+  .example-img-container {
+    padding: 20px;
+    padding-left: 35px;
+    padding-right: 35px; }
+    @media screen and (max-width: 991px) {
+      .example-img-container {
+        padding: 0; } }
   .example-content {
     padding-left: 5%;
     color: white; }

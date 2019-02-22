@@ -337,9 +337,16 @@ body
   &-img
     height: 480px
     width: 100%
-    object-fit: contain
+    object-fit: cover
     @media screen and (max-width: 991px) 
       height: auto
+      
+  &-img-container
+    padding: 20px
+    padding-left: 35px
+    padding-right: 35px
+    @media screen and (max-width: 991px) 
+      padding: 0
     
   &-content
     padding-left: 5%
