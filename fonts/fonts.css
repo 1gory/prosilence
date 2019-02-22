@@ -13,6 +13,13 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "Oswald-Light";
+  src: url("./Oswald/Oswald-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 
 
 /* Exo2 */
