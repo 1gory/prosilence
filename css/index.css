@@ -834,6 +834,162 @@ body {
         .footer-map img {
           width: 100%; } }
 
+.car {
+  padding-top: 80px;
+  position: relative;
+  margin-bottom: 260px; }
+  @media screen and (max-width: 991px) {
+    .car {
+      padding-top: 500px; } }
+  .car .material-menu {
+    margin-bottom: 210px; }
+    @media screen and (max-width: 991px) {
+      .car .material-menu {
+        margin-bottom: 50px; } }
+    .car .material-menu li.active {
+      color: white; }
+  .car-main {
+    text-align: center; }
+    .car-main__img {
+      opacity: 0.15; }
+      @media screen and (max-width: 991px) {
+        .car-main__img {
+          display: none; } }
+  .car-text {
+    position: absolute;
+    text-align: left; }
+    @media screen and (max-width: 991px) {
+      .car-text {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: 0px !important;
+        left: 0px !important; } }
+    .car-text h5 {
+      font-size: 14px;
+      font-family: "Exo2-Regular", sans-serif;
+      color: white;
+      min-width: 38px; }
+      @media screen and (max-width: 991px) {
+        .car-text h5 {
+          background-color: #1e232a;
+          padding: 15px;
+          margin: 0;
+          z-index: 50;
+          position: relative; } }
+    .car-text h4 {
+      font-size: 16px;
+      font-family: "Exo2-Medium", sans-serif;
+      color: white; }
+      @media screen and (max-width: 991px) {
+        .car-text h4 {
+          background-color: #1e232a;
+          padding: 15px;
+          margin: 0;
+          z-index: 50; } }
+    .car-text svg {
+      position: absolute;
+      top: -15px;
+      left: -60px;
+      opacity: 0.4; }
+      @media screen and (max-width: 991px) {
+        .car-text svg {
+          display: none; } }
+  .car-line {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    width: 80%;
+    display: none;
+    position: absolute;
+    left: 25px;
+    top: 25px; }
+    @media screen and (max-width: 991px) {
+      .car-line {
+        display: block; } }
+
+@media screen and (min-width: 992px) {
+  #car-text-1 {
+    top: -20px;
+    left: 150px; } }
+@media screen and (max-width: 1200px) {
+  #car-text-1 {
+    left: 50px; } }
+
+@media screen and (min-width: 992px) {
+  #car-text-2 {
+    top: -110px;
+    left: 520px;
+    text-align: right; } }
+@media screen and (max-width: 1200px) {
+  #car-text-2 {
+    left: 420px; } }
+#car-text-2 svg {
+  transform: scaleX(-1);
+  left: -20px; }
+
+@media screen and (min-width: 992px) {
+  #car-text-3 {
+    top: -100px;
+    left: 785px;
+    text-align: right; } }
+@media screen and (max-width: 1200px) {
+  #car-text-3 {
+    left: 685px; } }
+#car-text-3 svg {
+  transform: scaleX(-1);
+  left: -30px; }
+
+@media screen and (min-width: 992px) {
+  #car-text-4 {
+    top: -75px;
+    left: 895px;
+    text-align: right; } }
+@media screen and (max-width: 1200px) {
+  #car-text-4 {
+    left: 795px; } }
+#car-text-4 svg {
+  transform: scaleX(-1);
+  left: -40px; }
+
+@media screen and (min-width: 992px) {
+  #car-text-5 {
+    top: 290px;
+    left: 150px;
+    text-align: right; } }
+@media screen and (max-width: 1200px) {
+  #car-text-5 {
+    left: 50px; } }
+#car-text-5 svg {
+  transform: rotate(270deg);
+  left: 40px;
+  top: -60px; }
+
+@media screen and (min-width: 992px) {
+  #car-text-6 {
+    top: 195px;
+    left: 450px;
+    text-align: right; } }
+@media screen and (max-width: 1200px) {
+  #car-text-6 {
+    left: 350px; } }
+#car-text-6 svg {
+  transform: rotate(270deg);
+  left: 40px;
+  top: -60px; }
+
+@media screen and (min-width: 992px) {
+  #car-text-7 {
+    top: 280px;
+    left: 490px;
+    text-align: right; } }
+@media screen and (max-width: 1200px) {
+  #car-text-7 {
+    left: 390px; } }
+#car-text-7 svg {
+  transform: rotate(270deg);
+  left: 80px;
+  top: -60px; }
+
 .button-up {
   position: fixed;
   bottom: 0;
