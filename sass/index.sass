@@ -668,7 +668,7 @@ body
       margin-top: 20px
       margin-bottom: 50px
   
-  &-card img  
+  &-card img, &-card iframe  
     height: 250px
     width: 100%
     object-fit: cover
@@ -844,7 +844,7 @@ body
     @media screen and (max-width: 991px) 
       position: static
       margin-top: 50px 
-    img
+    &__container
       width: 960px
       height: 450px
       object-fit: cover
@@ -1003,6 +1003,7 @@ body
   justify-content: center
   align-items: center
   z-index: 122
+  display: none
   
   img
     width: 20px

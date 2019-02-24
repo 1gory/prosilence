@@ -654,7 +654,7 @@ body {
       .feedback-header {
         margin-top: 20px;
         margin-bottom: 50px; } }
-  .feedback-card img {
+  .feedback-card img, .feedback-card iframe {
     height: 250px;
     width: 100%;
     object-fit: cover; }
@@ -823,15 +823,15 @@ body {
       .footer-map {
         position: static;
         margin-top: 50px; } }
-    .footer-map img {
+    .footer-map__container {
       width: 960px;
       height: 450px;
       object-fit: cover; }
       @media screen and (max-width: 1200px) {
-        .footer-map img {
+        .footer-map__container {
           width: 600px; } }
       @media screen and (max-width: 991px) {
-        .footer-map img {
+        .footer-map__container {
           width: 100%; } }
 
 .car {
@@ -1000,7 +1000,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 122; }
+  z-index: 122;
+  display: none; }
   .button-up img {
     width: 20px;
     height: 20px; }
