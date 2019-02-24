@@ -21,7 +21,7 @@
     height: 32px;
     width: 32px;
     background-color: #eee;
-    border: 1px solid #353940; }
+    border: 1px solid #eee; }
   .custom-checkbox input:checked ~ .checkmark {
     background-image: url("../img/icons/Evericons-used/check-mark-blue.svg");
     background-position: center 5px; }
@@ -30,6 +30,7 @@
   background-image: url("../img/icons/Evericons-used/check-mark-white.svg");
   background-position: center 5px; }
 .custom-checkbox.dark .checkmark {
-  background: #353940; }
+  background: #353940;
+  border: 1px solid #353940; }
 
 /*# sourceMappingURL=custom_checkbox.css.map */

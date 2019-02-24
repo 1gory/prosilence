@@ -11,8 +11,9 @@ body
   
   &-logo
     width: 118px
-    height: 66px
-    
+    @media screen and (max-width: 767px) 
+      width: 101px
+      
   &-icon
     height: 18px
     
@@ -93,6 +94,12 @@ body
     box-shadow: 0px 15px 50px 0 rgba(0, 0, 0, 0.15)
     @media screen and (max-width: 991px) 
       margin-top: 160px
+    @media screen and (max-width: 767px) 
+      margin-top: 50px
+    @media screen and (max-width: 600px) 
+      margin-left: 20px
+      margin-right: 20px
+      padding: 20px
 
   &-input
     border: 1px solid rgba(30, 35, 42, 0.15)
@@ -164,15 +171,23 @@ body
     margin-bottom: 140px
     @media screen and (max-width: 991px) 
       margin-bottom: 70px
+    @media screen and (max-width: 767px) 
+      font-size: 36px
     
   &-cards
     display: flex
     justify-content: space-between
+    @media screen and (max-width: 767px) 
+      display: block
     
   &-card
     width: 135px
     @media screen and (max-width: 1200px) 
       width: 80px
+    @media screen and (max-width: 767px) 
+      width: 49%
+      display: inline-block
+      margin-bottom: 35px
     &__icon
       height: 36px
       width: 36px
@@ -180,6 +195,8 @@ body
       margin-bottom: 50px
       @media screen and (max-width: 991px) 
         margin-bottom: 25px
+      @media screen and (max-width: 767px) 
+        margin-bottom: 15px
       
     &__text
       display: block
@@ -200,6 +217,8 @@ body
   padding-bottom: 20px
   padding-top: 20px
   margin: auto
+  @media screen and (max-width: 767px)
+    width: 200px
   h2
     color: white
     font-size: 36px
@@ -207,6 +226,8 @@ body
     text-align: center
     text-transform: uppercase
     margin: 0
+    @media screen and (max-width: 767px) 
+      font-size: 24px
     
 
     
@@ -232,6 +253,9 @@ body
   left: -1px
   right: -1px     
   background: #1e2329
+  @media screen and (max-width: 767px) 
+    top: 15px
+    bottom: 15px
     
 .corners:after
   z-index: -1
@@ -243,6 +267,9 @@ body
   left: 25px
   right: 25px        
   background: #1e2329
+  @media screen and (max-width: 767px) 
+    left: 15px
+    right: 15px
   
   
 .prices
@@ -260,6 +287,8 @@ body
     margin-top: 90px
     @media screen and (max-width: 991px) 
       flex-wrap: nowrap
+    @media screen and (max-width: 767px)
+      margin-top: 50px
   
   &-card
     border: 2px solid rgba(255, 255, 255, 0.1)
@@ -316,18 +345,26 @@ body
 .examples
   padding-top: 70px
   padding-bottom: 100px
+  @media screen and (max-width: 767px)
+    padding-bottom: 30px
   .section-header
     margin-bottom: 50px 
     width: auto
+    @media screen and (max-width: 767px)
+      margin-bottom: 0px
     h2
-      margin-right: 90px
+      margin-right: 50px
   &-arrow
     width: 35px
-    margin-right: 40px
+    margin-left: 40px
     opacity: 0.6
     margin-top: 5px
     &:hover
       opacity: 1
+    @media screen and (max-width: 767px)
+      margin-left: 20px
+    
+    
     
 .example
   padding-top: 15px
@@ -347,27 +384,36 @@ body
     padding-right: 35px
     @media screen and (max-width: 991px) 
       padding: 0
+    @media screen and (max-width: 767px)
+      padding: 15px
     
   &-content
     padding-left: 5%
     color: white
+    @media screen and (max-width: 767px)
+      padding-left: 15px
     
   &-header
     font-family: 'Exo2-SemiBold', sans-serif 
     font-size: 28px
     margin-bottom: 70px
     margin-top: 70px
+    @media screen and (max-width: 767px)
+      margin-top: 20px
+      margin-bottom: 30px
     
   &-info
     display: flex
     justify-content: flex-start
     margin-bottom: 25px
-      
+       
     &__left
       width: 110px
       margin-right: 65px
       font-family: 'Exo2-SemiBold', sans-serif 
       font-size: 16px
+      @media screen and (max-width: 767px)
+        margin-right: 40px
       
     &__right
       font-family: 'Exo2-Regular', sans-serif 
@@ -386,6 +432,8 @@ body
     color: white
     padding-bottom: 15px
     margin-top: 60px
+    @media screen and (max-width: 767px)
+      margin-top: 30px
     
     &:hover
       color: white
@@ -402,6 +450,10 @@ body
     margin-bottom: 300px
     @media screen and (max-width: 991px) 
       margin-bottom: 50px
+    @media screen and (max-width: 767px)
+      margin-top: 0
+      padding-top: 180px
+      overflow: hidden
   &-bg
     position: absolute
     left: -140px
@@ -426,6 +478,7 @@ body
     @media screen and (max-width: 767px) 
       display: block
       width: 100%
+      margin-bottom: 30px
       .calc-input
         width: 100%
     
@@ -460,11 +513,14 @@ body
     color: #1e232a
     background-color: white
     width: 220px
-    
+    @media screen and (max-width: 767px)
+      width: 100%
     
   .section-header
     width: 100%
     margin-bottom: 70px
+    @media screen and (max-width: 767px)
+      margin-bottom: 30px
     
     
 .material
@@ -473,6 +529,8 @@ body
   background: white
   @media screen and (max-width: 991px) 
     padding-top: 35px
+  @media screen and (max-width: 767px) 
+    padding-bottom: 20px
   .container
     position: relative
   
@@ -481,10 +539,14 @@ body
     margin-bottom: 70px
     @media screen and (max-width: 991px) 
       margin-bottom: 35px
+    @media screen and (max-width: 767px) 
+      padding: 0
     h2
       color: #3e4856
       font-family: 'Oswald-Medium', sans-serif
       font-size: 30px
+      @media screen and (max-width: 767px) 
+        font-size: 20px  
     
   &-thumb
     width: 580px
@@ -498,10 +560,17 @@ body
       position: static
       display: block
       margin-bottom: 40px
+    @media screen and (max-width: 767px) 
+      height: 280px
+      margin-left: -15px
+      margin-right: -15px 
     
   &-menu
     margin-top: 130px
     margin-bottom: 60px
+    @media screen and (max-width: 767px) 
+      margin-top: 40px
+      margin-bottom: 20px
     &__list
       display: flex
       justify-content: space-between
@@ -542,10 +611,15 @@ body
 .faq
   padding-top: 150px
   padding-bottom: 50px
-  
+  @media screen and (max-width: 767px)
+    padding-top: 40px
+    
+    
   
   .section-header
     margin-bottom: 100px
+    @media screen and (max-width: 767px)
+      margin-bottom: 40px
     
   &-card
     background-color: white
@@ -610,6 +684,12 @@ body
   background-position: center center  
   .container
     position: relative
+    @media screen and (max-width: 767px)
+      padding: 0
+      .row
+        margin: 0
+      .header-form
+        margin: 0
   
   &-header
     position: absolute
@@ -663,6 +743,10 @@ body
   position: relative
   @media screen and (max-width: 991px) 
     padding-bottom: 20px
+  @media screen and (max-width: 767px)
+    padding-top: 30px
+    .section-header h2
+      font-size: 30px
   &-img
     width: 600px
     height: 450px
@@ -696,12 +780,17 @@ body
     margin-bottom: 120px
     @media screen and (max-width: 991px) 
       display: block
-    
+    @media screen and (max-width: 767px)
+      margin-bottom: 30px
+
     li 
       @media screen and (max-width: 991px) 
         display: inline-block
         width: 49%
         margin-bottom: 30px
+        vertical-align: middle
+        @media screen and (max-width: 767px)
+          margin-bottom: 20px
       a
         font-size: 14px
         font-family: 'Exo2-Medium', sans-serif 
@@ -780,6 +869,14 @@ body
     height: 20px
     
     
+.mobile-menu
+  @media screen and (max-width: 991px) 
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__button
+    height: 30px
+
     
 .mobile-hide
   @media screen and (max-width: 991px) 
