@@ -92,6 +92,7 @@ body
     background-color: white
     padding: 40px
     box-shadow: 0px 15px 50px 0 rgba(0, 0, 0, 0.15)
+    z-index: 50
     @media screen and (max-width: 991px) 
       margin-top: 160px
     @media screen and (max-width: 767px) 
@@ -105,6 +106,17 @@ body
     border: 1px solid rgba(30, 35, 42, 0.15)
     margin-bottom: 15px
     position: relative
+    &.required
+      span
+        display: inline-block
+    &.disabled
+      background-color: #ebecee
+      input
+        background-color: #ebecee 
+    &.validation-fail
+      border: solid 1px #ff4657
+      & input
+        outline: none
         
     &__label
       display: block
@@ -116,9 +128,10 @@ body
       padding-left: 20px
       top: 15px
       z-index: 3
-      
-    &__text
-      opacity: 0.3
+      span
+        display: none
+        color: #ff939d
+    &__text 
       color: rgb(30, 34, 41)
       border: none
       width: 100%
@@ -132,6 +145,9 @@ body
         -webkit-appearance: none 
         -moz-appearance: none
         appearance: none
+        cursor: pointer
+      &::placeholder
+        color: rgba(30, 34, 41, 0.3)
   &-checkbox
     font-size: 16px
     font-family: 'Exo2-Regular', sans-serif 
@@ -140,6 +156,7 @@ body
   &-checkbox__small
     font-size: 14px
     font-family: 'Exo2-Regular', sans-serif 
+    padding-left: 35px
     
     .checkmark
       height: 24px
@@ -733,9 +750,19 @@ body
   .header-input__text
     background-color: #3e4856
     opacity: 1
+    color: white
+    &::placeholder
+      color: rgba(255, 255, 255, 0.3)
   select 
     color: rgba(255, 255, 255, 0.3)
     
+  &.disabled
+    background-color: #353940
+    input
+      background-color: #353940
+      color: white
+      &::placeholder
+        color: white
     
 .about
   padding-top: 170px

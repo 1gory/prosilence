@@ -86,7 +86,8 @@ body {
     height: 575px;
     background-color: white;
     padding: 40px;
-    box-shadow: 0px 15px 50px 0 rgba(0, 0, 0, 0.15); }
+    box-shadow: 0px 15px 50px 0 rgba(0, 0, 0, 0.15);
+    z-index: 50; }
     @media screen and (max-width: 991px) {
       .header-form {
         margin-top: 160px; } }
@@ -102,6 +103,16 @@ body {
     border: 1px solid rgba(30, 35, 42, 0.15);
     margin-bottom: 15px;
     position: relative; }
+    .header-input.required span {
+      display: inline-block; }
+    .header-input.disabled {
+      background-color: #ebecee; }
+      .header-input.disabled input {
+        background-color: #ebecee; }
+    .header-input.validation-fail {
+      border: solid 1px #ff4657; }
+      .header-input.validation-fail input {
+        outline: none; }
     .header-input__label {
       display: block;
       font-size: 11px;
@@ -112,8 +123,10 @@ body {
       padding-left: 20px;
       top: 15px;
       z-index: 3; }
+      .header-input__label span {
+        display: none;
+        color: #ff939d; }
     .header-input__text {
-      opacity: 0.3;
       color: #1e2229;
       border: none;
       width: 100%;
@@ -126,14 +139,18 @@ body {
       .header-input__text.select {
         -webkit-appearance: none;
         -moz-appearance: none;
-        appearance: none; }
+        appearance: none;
+        cursor: pointer; }
+      .header-input__text::placeholder {
+        color: rgba(30, 34, 41, 0.3); }
   .header-checkbox {
     font-size: 16px;
     font-family: "Exo2-Regular", sans-serif;
     padding-top: 4px; }
   .header-checkbox__small {
     font-size: 14px;
-    font-family: "Exo2-Regular", sans-serif; }
+    font-family: "Exo2-Regular", sans-serif;
+    padding-left: 35px; }
     .header-checkbox__small .checkmark {
       height: 24px;
       width: 24px;
@@ -711,9 +728,19 @@ body {
     color: white; }
   .header-input.dark .header-input__text {
     background-color: #3e4856;
-    opacity: 1; }
+    opacity: 1;
+    color: white; }
+    .header-input.dark .header-input__text::placeholder {
+      color: rgba(255, 255, 255, 0.3); }
   .header-input.dark select {
     color: rgba(255, 255, 255, 0.3); }
+  .header-input.dark.disabled {
+    background-color: #353940; }
+    .header-input.dark.disabled input {
+      background-color: #353940;
+      color: white; }
+      .header-input.dark.disabled input::placeholder {
+        color: white; }
 
 .about {
   padding-top: 170px;

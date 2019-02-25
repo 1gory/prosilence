@@ -8,6 +8,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  .custom-checkbox a {
+    color: #2889f0;
+    text-decoration: none; }
   .custom-checkbox input {
     position: absolute;
     opacity: 0;
