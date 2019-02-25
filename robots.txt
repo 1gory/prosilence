@@ -1,0 +1,3 @@
+User-Agent: *
+Host: https://pro-silence.ru
+sitemap: https://pro-silence.ru/sitemap.xml
