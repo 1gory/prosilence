@@ -260,15 +260,11 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top: 25px;
-  bottom: 25px;
+  top: 15px;
+  bottom: 15px;
   left: -1px;
   right: -1px;
   background: #1e2329; }
-  @media screen and (max-width: 767px) {
-    .corners:before {
-      top: 15px;
-      bottom: 15px; } }
 
 .corners:after {
   z-index: -1;
@@ -277,13 +273,9 @@ body {
   position: absolute;
   top: -1px;
   bottom: -1px;
-  left: 25px;
-  right: 25px;
+  left: 15px;
+  right: 15px;
   background: #1e2329; }
-  @media screen and (max-width: 767px) {
-    .corners:after {
-      left: 15px;
-      right: 15px; } }
 
 .prices {
   padding-top: 0;
@@ -378,7 +370,8 @@ body {
 
 .example {
   padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  border-color: rgba(255, 255, 255, 0.15); }
   @media screen and (max-width: 991px) {
     .example {
       border: none; } }
@@ -1076,6 +1069,51 @@ body {
     width: 100%; }
     .mobile-menu__social a:last-child {
       margin-right: 20px; }
+
+.form-success__icon {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #26dee5;
+  border-radius: 50%;
+  margin-top: 120px; }
+  .form-success__icon img {
+    height: 30px; }
+.form-success__header {
+  font-size: 24px;
+  font-family: "Exo2-SemiBold", sans-serif;
+  text-align: center;
+  margin-top: 40px; }
+.form-success__text {
+  font-family: "Exo2-Regular", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 45px;
+  padding-left: 45px;
+  padding-right: 45px; }
+.form-success__button {
+  background: none;
+  border: none;
+  border-bottom: 1px dashed #2889f0;
+  display: block;
+  margin: auto;
+  font-family: "Exo2-Regular", sans-serif;
+  font-size: 16px;
+  color: #2889f0;
+  margin-top: 160px; }
+
+.form-fail .form-success__icon {
+  border: 1px solid #ff4657; }
+.form-fail__phone {
+  font-family: "Exo2-Bold", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #2889f0;
+  display: block;
+  margin: auto; }
 
 @media screen and (max-width: 991px) {
   .mobile-hide {
