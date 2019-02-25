@@ -1027,8 +1027,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 122;
-  display: none; }
+  z-index: 122; }
   .button-up img {
     width: 20px;
     height: 20px; }
