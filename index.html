@@ -161,31 +161,53 @@
 
         </div>
         <div class="col-lg-5 offset-lg-2 header-form">
-          <div class="header-input required validation-fail">
+          <div class="header-input">
             <label class='header-input__label'>Имя <span>*</span></label>
             <input type="text" class='header-input__text' placeholder='Имя'>
           </div>
-          <div class="header-input disabled required">
+          <div class="header-input">
             <label class='header-input__label'>Телефон <span>*</span></label>
-            <input type="text" class='header-input__text' placeholder='+7 ___ ___ __ __' disabled>
+            <input type="text" class='header-input__text' placeholder='+7 ___ ___ __ __'>
           </div>
-          <div class="header-input margin-30">
+          <div class="header-input">
             <label class='header-input__label'>Марка авто <span>*</span></label>
+            <select class='header-input__text select' id='select-car-1-header'>
+              <option value="0">Выберите марку</option>
+              <option value="Марка1">Марка1</option>
+              <option value="Марка2">Марка2</option>
+              <option value="Марка3">Марка3</option>
+            </select>
+          </div>
+          <div class="header-input margin-30" id='select-car-2-header' style='display:none'>
+            <label class='header-input__label'>Модель авто <span>*</span></label>
             <select class='header-input__text select'>
-              <option value="1">Выберите марку</option>
-              <option value="2">Выберите марку</option>
-              <option value="3">Выберите марку</option>
-              <option value="4">Выберите марку</option>
+              <option value="1">Выберите модель</option>
+              <option value="2">Выберите Модель</option>
+              <option value="3">Выберите Модель</option>
+              <option value="4">Выберите Модель</option>
             </select>
           </div>
           <label class="header-checkbox custom-checkbox">Выбрать услуги
-            <input type="checkbox">
+            <input type="checkbox" id='checkbox-1-header'>
             <span class="checkmark"></span>
           </label>
+          <div class="header-input" style='display:none' id='select-car-3-header'>
+            <label class='header-input__label'>Услуги <span>*</span></label>
+            <select class='header-input__text select'>
+              <option value="1">Выберите услугу</option>
+              <option value="2">Выберите услугу</option>
+              <option value="3">Выберите услугу</option>
+              <option value="4">Выберите услугу</option>
+            </select>
+          </div>
           <label class="header-checkbox custom-checkbox">Добавить примечание
-            <input type="checkbox">
+            <input type="checkbox" id='checkbox-2-header'>
             <span class="checkmark"></span>
           </label>
+          <div class="header-input" style='display:none' id='textarea-header'>
+            <label class='header-input__label'>Примечание <span>*</span></label>
+            <textarea class='header-input__text header-input__textarea'></textarea>
+          </div>
           <button class='header-button'>Оставить заявку</button>
           <label class="header-checkbox__small custom-checkbox">Согласен на <a href="#">обработку данных</a>
             <input type="checkbox">
@@ -196,7 +218,6 @@
     </div>
 
   </header>
-  
   
   <section class="car container">
     <div class="row">
@@ -659,31 +680,53 @@
             <h3>Оставить заявку</h3>
             <div>Оставьте нам информацию о своей машине и мы свяжемся с вами в течение дня</div>
           </div>
-          <div class="header-input dark required disabled">
+          <div class="header-input dark">
             <label class='header-input__label'>Имя <span>*</span></label>
-            <input type="text" class='header-input__text' placeholder='Имя' disabled>
+            <input type="text" class='header-input__text' placeholder='Имя'>
           </div>
           <div class="header-input dark">
             <label class='header-input__label'>Телефон <span>*</span></label>
             <input type="text" class='header-input__text' placeholder='+7 ___ ___ __ __'>
           </div>
-          <div class="header-input margin-30 dark">
+          <div class="header-input dark">
             <label class='header-input__label'>Марка авто <span>*</span></label>
-            <select class='header-input__text select'>
-              <option value="1">Выберите марку</option>
-              <option value="2">Выберите марку</option>
-              <option value="3">Выберите марку</option>
-              <option value="4">Выберите марку</option>
+            <select class='header-input__text select' id='select-car-1-calc'>
+              <option value="0">Выберите марку</option>
+              <option value="Марка1">Марка1</option>
+              <option value="Марка2">Марка2</option>
+              <option value="Марка3">Марка3</option>
             </select>
           </div>
+          <div class="header-input margin-30 dark" style='display:none' id='select-car-2-calc'>
+              <label class='header-input__label'>Модель авто <span>*</span></label>
+              <select class='header-input__text select'>
+                <option value="1">Выберите модель</option>
+                <option value="2">Выберите Модель</option>
+                <option value="3">Выберите Модель</option>
+                <option value="4">Выберите Модель</option>
+              </select>
+            </div>
           <label class="header-checkbox custom-checkbox dark">Выбрать услуги
-            <input type="checkbox">
+            <input type="checkbox" id='checkbox-1-calc'>
             <span class="checkmark"></span>
           </label>
+          <div class="header-input dark" style='display:none' id='select-car-3-calc'>
+            <label class='header-input__label'>Услуги <span>*</span></label>
+            <select class='header-input__text select'>
+              <option value="1">Выберите услугу</option>
+              <option value="2">Выберите услугу</option>
+              <option value="3">Выберите услугу</option>
+              <option value="4">Выберите услугу</option>
+            </select>
+          </div>
           <label class="header-checkbox custom-checkbox dark">Добавить примечание
-            <input type="checkbox">
+            <input type="checkbox" id='checkbox-2-calc'>
             <span class="checkmark"></span>
           </label>
+          <div class="header-input dark" style='display:none' id='textarea-calc'>
+            <label class='header-input__label'>Примечание <span>*</span></label>
+            <textarea class='header-input__text header-input__textarea'></textarea>
+          </div>
           <button class='header-button'>Оставить заявку</button>
           <label class="header-checkbox__small custom-checkbox dark">Согласен на <a href="#">обработку данных</a>
             <input type="checkbox">
