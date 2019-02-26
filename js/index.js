@@ -66,47 +66,7 @@ $(document).ready(function () {
     }
   });
 
-
-//  $('.slick-prices').slick({
-//    dots: false,
-//    arrows: false,
-//    infinite: false,
-//    speed: 300,
-//    slidesToShow: 3,
-//    slidesToScroll: 3,
-//    autoplay: false,
-//    initialSlide: 1,
-//    responsive: [{
-//      breakpoint: 991,
-//      settings: {
-//        slidesToShow: 1,
-//        slidesToScroll: 1,
-//        infinite: false,
-//        dots: false,
-//      }
-//    }]
-//  });
-//  $('.slick-fb').slick({
-//    dots: false,
-//    arrows: false,
-//    infinite: false,
-//    speed: 300,
-//    slidesToShow: 3,
-//    slidesToScroll: 1,
-//    autoplay: false,
-//    initialSlide: 0,
-//    responsive: [{
-//      breakpoint: 991,
-//      settings: {
-//        slidesToShow: 1,
-//        slidesToScroll: 1,
-//        infinite: false,
-//        dots: false
-//      }
-//    }]
-//  });
-
-
+  $('.header-input__phone').inputmask("+7 999 999 99 99");
 });
 
 $(document).on('click', 'a[href^="#"]', function (event) {
