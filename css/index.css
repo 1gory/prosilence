@@ -1,3 +1,8 @@
+@media screen and (max-width: 991px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px; } }
+
 body {
   margin: 0;
   background-color: #1e232a; }
@@ -86,7 +91,7 @@ body {
     background-color: white;
     padding: 30px;
     box-shadow: 0px 15px 50px 0 rgba(0, 0, 0, 0.15);
-    z-index: 50; }
+    z-index: 51; }
     @media screen and (max-width: 991px) {
       .header-form {
         margin-top: 160px; } }
@@ -287,7 +292,7 @@ body {
     margin-top: 160px; }
     @media screen and (max-width: 991px) {
       .prices-header {
-        margin-top: 600px; } }
+        margin-top: 30px; } }
   .prices-cards {
     margin-top: 90px; }
     @media screen and (max-width: 991px) {
@@ -627,10 +632,12 @@ body {
   .faq-card {
     background-color: white;
     color: #1e232a;
-    padding-bottom: 35px; }
+    padding-bottom: 35px;
+    height: 465px; }
     @media screen and (max-width: 991px) {
       .faq-card {
-        margin-bottom: 10px; } }
+        margin-bottom: 10px;
+        height: auto; } }
     .faq-card__text {
       position: relative;
       padding-left: 60px;
@@ -852,6 +859,9 @@ body {
       width: 960px;
       height: 450px;
       object-fit: cover; }
+      @media screen and (max-width: 1300px) {
+        .footer-map__container {
+          width: 800px; } }
       @media screen and (max-width: 1200px) {
         .footer-map__container {
           width: 600px; } }
@@ -862,10 +872,11 @@ body {
 .car {
   padding-top: 80px;
   position: relative;
-  margin-bottom: 260px; }
+  margin-bottom: 160px; }
   @media screen and (max-width: 991px) {
     .car {
-      padding-top: 500px; } }
+      padding-top: 530px;
+      margin-bottom: 60px; } }
   .car .material-menu {
     margin-bottom: 210px; }
     @media screen and (max-width: 991px) {
