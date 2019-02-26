@@ -38,8 +38,8 @@ $(document).ready(function () {
       $('#textarea-header').fadeOut()
     }
   });
-  
-  
+
+
   $('#select-car-1-calc').on('change', () => {
     console.log($('#select-car-1-calc').find(":selected").val())
     if ($('#select-car-1-calc').find(":selected").val() !== '0') {
@@ -67,6 +67,46 @@ $(document).ready(function () {
   });
 
 
+//  $('.slick-prices').slick({
+//    dots: false,
+//    arrows: false,
+//    infinite: false,
+//    speed: 300,
+//    slidesToShow: 3,
+//    slidesToScroll: 3,
+//    autoplay: false,
+//    initialSlide: 1,
+//    responsive: [{
+//      breakpoint: 991,
+//      settings: {
+//        slidesToShow: 1,
+//        slidesToScroll: 1,
+//        infinite: false,
+//        dots: false,
+//      }
+//    }]
+//  });
+//  $('.slick-fb').slick({
+//    dots: false,
+//    arrows: false,
+//    infinite: false,
+//    speed: 300,
+//    slidesToShow: 3,
+//    slidesToScroll: 1,
+//    autoplay: false,
+//    initialSlide: 0,
+//    responsive: [{
+//      breakpoint: 991,
+//      settings: {
+//        slidesToShow: 1,
+//        slidesToScroll: 1,
+//        infinite: false,
+//        dots: false
+//      }
+//    }]
+//  });
+
+
 });
 
 $(document).on('click', 'a[href^="#"]', function (event) {
@@ -75,4 +115,59 @@ $(document).on('click', 'a[href^="#"]', function (event) {
   $('html, body').animate({
     scrollTop: $($.attr(this, 'href')).offset().top
   }, 500);
+});
+
+
+function mobileOnlySliders () {
+  $('.slick-prices').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: false,
+    initialSlide: 1,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: false,
+      }
+    }]
+  });
+  $('.slick-fb').slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    initialSlide: 0,
+    responsive: [{
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: false
+      }
+    }]
+  });
+}
+
+$(window).resize(function (e) {
+  if (window.innerWidth < 992) {
+    if (!$('.slick-prices').hasClass('slick-initialized')) {
+      mobileOnlySliders();
+    }
+
+  } else {
+    if ($('.slick-prices').hasClass('slick-initialized')) {
+      $('.slick-prices').slick('unslick');
+    }
+  }
 });

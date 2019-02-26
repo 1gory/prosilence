@@ -6,9 +6,11 @@
   <meta name="yandex-verification" content="ddd2c10967652d0f" />
   <meta name="yandex-verification" content="d8c8dc264b766b94" />
   <meta name="google-site-verification" content="SYpDwHamtJQHI3iZzB1wcOghe9-gxMnkmt7aYWPWw1g" />
-  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Автошумоизоляция в Москве pro-silence.ru</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  
   <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
   <link rel="stylesheet" type="text/css" href="css/custom_checkbox.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -260,7 +262,7 @@
       <div class="col-lg-12 car-main">
         <img src="./img/car-2.png" alt="" class='car-main__img'>
         <div class="car-text" id='car-text-1'>
-          <h5>Багажник с крышкой</h5>
+          <h5>Багажник <br class='mobile-show'>с крышкой</h5>
           <div class="car-line"></div>
           <h4>от 7000 ₽</h4>
           <svg width="200" height="200">
@@ -320,7 +322,7 @@
           </svg>
         </div>
         <div class="car-text" id='car-text-7'>
-          <h5>Пол салона (днище)</h5>
+          <h5>Пол салона <br class='mobile-show'>(днище)</h5>
           <div class="car-line"></div>
           <h4>от 9000 ₽</h4>
           <svg width="200" height="200">
@@ -339,11 +341,10 @@
     <h2>Комплекты цен</h2>
   </div>
   <div class="invisible-scrollbar-wrapper">
-
     <section class='prices'>
       <div class="container">
-        <div class="row prices-cards">
-          <div class="col-lg-4 col-12">
+        <div class="row prices-cards slick-prices">
+          <div class="col-lg-4 col-12 prices-card__wrapper">
             <div class="prices-card">
               <h4 class="prices-card__header">Пакет «Эконом»</h4>
               <h5 class="prices-card__subheader">Снижение шума до 80%</h5>
@@ -363,7 +364,7 @@
               <button class="prices-card__button">Заказать</button>
             </div>
           </div>
-          <div class="col-lg-4 col-12">
+          <div class="col-lg-4 col-12 prices-card__wrapper">
             <div class="prices-card prices-card__background">
               <h4 class="prices-card__header">Пакет «Стандарт»</h4>
               <h5 class="prices-card__subheader">Снижение шума до 80%</h5>
@@ -383,7 +384,7 @@
               <button class="prices-card__button">Заказать</button>
             </div>
           </div>
-          <div class="col-lg-4 col-12">
+          <div class="col-lg-4 col-12 prices-card__wrapper">
             <div class="prices-card">
               <h4 class="prices-card__header">Пакет «Премиум»</h4>
               <h5 class="prices-card__subheader">Снижение шума до 80%</h5>
@@ -655,7 +656,7 @@
   <div class="invisible-scrollbar-wrapper">
     <section class="feedback">
       <div class="container">
-        <div class="row feedback-row">
+        <div class="row feedback-row slick-fb">
           <div class="col-lg-4 col-12 feedback-card">
             <!--            <img src="./img/hero.jpg" alt="">-->
             <iframe src="https://www.youtube.com/embed/0Xj7lawfHR4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1057,7 +1058,9 @@
       });
     }
   </script>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjzyu8mDsvRp7WudZ8uDP5tdjcttFD3mM&callback=initMap" async defer></script>
   <script src='./js/index.js'></script>
 </body>

@@ -319,10 +319,15 @@ body
     position: relative
     height: 600px
     
+    &__wrapper
+      @media screen and (max-width: 600px)
+        padding: 0
+        margin-left: 2px
+        margin-right: 2px 
     &__header
       color: white
       font-family: 'Exo2-Bold', sans-serif 
-      font-size: 18px
+      font-size: 18px 
       margin-bottom: 20px
     &__subheader
       color: white
@@ -564,6 +569,7 @@ body
       margin-bottom: 35px
     @media screen and (max-width: 767px) 
       padding: 0
+      width: 100%
     h2
       color: #3e4856
       font-family: 'Oswald-Medium', sans-serif
@@ -1149,6 +1155,8 @@ body
 
     
     
+.slick-list
+  overflow: initial!important
   
     
   

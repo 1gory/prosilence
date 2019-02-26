@@ -307,6 +307,11 @@ body {
     padding-top: 40px;
     position: relative;
     height: 600px; }
+    @media screen and (max-width: 600px) {
+      .prices-card__wrapper {
+        padding: 0;
+        margin-left: 2px;
+        margin-right: 2px; } }
     .prices-card__header {
       color: white;
       font-family: "Exo2-Bold", sans-serif;
@@ -548,7 +553,8 @@ body {
         margin-bottom: 35px; } }
     @media screen and (max-width: 767px) {
       .material .section-header.dark {
-        padding: 0; } }
+        padding: 0;
+        width: 100%; } }
     .material .section-header.dark h2 {
       color: #3e4856;
       font-family: "Oswald-Medium", sans-serif;
@@ -1135,5 +1141,8 @@ body {
   @media screen and (max-width: 991px) {
     .mobile-show {
       display: block; } }
+
+.slick-list {
+  overflow: initial !important; }
 
 /*# sourceMappingURL=index.css.map */
