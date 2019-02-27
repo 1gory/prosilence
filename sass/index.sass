@@ -474,6 +474,7 @@ body
 
   
 .calc  
+  position: relative
   &-wrapper
     position: relative      
     padding-top: 10px
@@ -1177,6 +1178,39 @@ body
     
 .slick-list
   overflow: initial!important
+  
+.calc-inner-2
+  display: none
+  .calc-input
+    width: 100%
+    
+    input::placeholder
+      color: #55595f
+  .custom-checkbox
+    color: white
+    
+  .about-text
+    margin-bottom: 50px
+.calc-back
+  opacity: 0.3
+  position: absolute
+  top: 160px
+  right: 0
+  display: none
+  cursor: pointer
+  span
+    color: white
+    font-family: 'Exo2-Regular', sans-serif 
+  img
+    height: 22px
+    margin-right: 20px
+  &:hover
+    opacity: 1
+  @media screen and (max-width: 991px) 
+    position: static 
+    margin-top: 20px
+    justify-content: flex-end
+    width: 100%
   
 
   

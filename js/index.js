@@ -40,7 +40,18 @@ $(document).ready(function () {
     $('.material .example-link').show()
 
   });
-
+  $('.calc-button').on('click', function () {
+    $('.calc-inner-1').css('display', 'none') 
+    $('.calc-inner-2').css('display', 'block') 
+    $('.calc-back').css('display', 'flex') 
+  });
+  
+  $('.calc-back').on('click', function () {
+    $('.calc-inner-1').css('display', 'block') 
+    $('.calc-inner-2').css('display', 'none') 
+    $('.calc-back').css('display', 'none') 
+  });
+  
   var activeExampleTab = 1
 
   $('.examples .examples-arrow__left').on('click', function () {
