@@ -14,35 +14,65 @@ $(document).ready(function () {
   $('body').on('click', '.mobile-menu__list li a', () => {
     $('.mobile-menu').fadeToggle()
   });
-  
+
   $('.car .material-menu__list li').on('click', function () {
     if ($(this).hasClass('active')) return
-        
+
     $('.car .material-menu__list li').removeClass('active')
     $(this).addClass('active')
 
     $('.car-tabs .car-main').removeClass('active')
     $('.car-tabs .car-main:nth-child(' + ($(this).index() + 1) + ')').addClass('active')
-    
+
   });
-  
+
   $('.material .material-menu__list li').on('click', function () {
     if ($(this).hasClass('active')) return
-        
+
     $('.material .material-menu__list li').removeClass('active')
     $(this).addClass('active')
 
     $('.material-tabs .row').removeClass('active')
     $('.material-tabs .row:nth-child(' + ($(this).index() + 1) + ')').addClass('active')
     
+    $('.material-card__mobile:not([class*="mobile-hide"])').addClass('mobile-hide')
+    
+    $('.material .example-link').show()
+
   });
-  
-  $('.example-link').on('click', function () {
-    if ($(this).html() == 'Посмотреть фото')
-      $(this).html("Скрыть") 
+
+  var activeExampleTab = 1
+
+  $('.examples .examples-arrow__left').on('click', function () {
+    if (activeExampleTab <= 1) return
+
+    activeExampleTab--
+
+    $('.examples .example').removeClass('active')
+    $('.examples .example:nth-child(' + (activeExampleTab + 1) + ')').addClass('active')
+  });
+
+  $('.examples .examples-arrow__right').on('click', function () {
+    if (activeExampleTab >= $('.example').length) return
+
+    activeExampleTab++
+
+    $('.examples .example').removeClass('active')
+    $('.examples .example:nth-child(' + (activeExampleTab + 1) + ')').addClass('active')
+  });
+
+  $('.examples .example-link').on('click', function () {
+    if ($(this).html() == 'Показать все')
+      $(this).html("Скрыть")
     else
       $(this).html("Посмотреть фото")
     $('.example-gallery').fadeToggle()
+  });
+  
+  $('.material .example-link').on('click', function () {
+    $(this).hide()  
+    
+    $('.material-card__mobile').removeClass('mobile-hide')
   });
 
   $('#select-car-1-header').on('change', () => {
@@ -108,7 +138,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 });
 
 
-function mobileOnlySliders () {
+function mobileOnlySliders() {
   $('.slick-prices').slick({
     dots: false,
     arrows: false,
@@ -149,12 +179,12 @@ function mobileOnlySliders () {
   });
 }
 
+
 $(window).resize(function (e) {
   if (window.innerWidth < 992) {
     if (!$('.slick-prices').hasClass('slick-initialized')) {
       mobileOnlySliders();
     }
-
   } else {
     if ($('.slick-prices').hasClass('slick-initialized')) {
       $('.slick-prices').slick('unslick');

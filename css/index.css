@@ -371,7 +371,8 @@ body {
     width: 35px;
     margin-left: 40px;
     opacity: 0.6;
-    margin-top: 5px; }
+    margin-top: 5px;
+    cursor: pointer; }
     .examples-arrow:hover {
       opacity: 1; }
     @media screen and (max-width: 767px) {
@@ -381,7 +382,10 @@ body {
 .example {
   padding-top: 15px;
   padding-bottom: 15px;
-  border-color: rgba(255, 255, 255, 0.15); }
+  border-color: rgba(255, 255, 255, 0.15);
+  display: none; }
+  .example.active {
+    display: flex; }
   @media screen and (max-width: 991px) {
     .example {
       border: none; } }
@@ -626,6 +630,11 @@ body {
           width: 140px;
           padding: 10px;
           font-size: 14px; } }
+  .material-show-all {
+    text-align: center; }
+    .material-show-all .example-link {
+      color: #3e4856;
+      border-color: #3e4856; }
 
 .faq {
   padding-top: 150px;

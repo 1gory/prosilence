@@ -386,6 +386,7 @@ body
     margin-left: 40px
     opacity: 0.6
     margin-top: 5px
+    cursor: pointer
     &:hover
       opacity: 1
     @media screen and (max-width: 767px)
@@ -397,6 +398,9 @@ body
   padding-top: 15px
   padding-bottom: 15px
   border-color: rgba(255,255,255,0.15)
+  display: none
+  &.active
+    display: flex
   @media screen and (max-width: 991px) 
     border: none
   &-img
@@ -641,6 +645,14 @@ body
         width: 140px
         padding: 10px
         font-size: 14px
+        
+  &-show-all
+    text-align: center
+    .example-link
+      color: #3e4856
+      border-color: #3e4856
+    
+    
       
 .faq
   padding-top: 150px
@@ -1165,6 +1177,8 @@ body
     
 .slick-list
   overflow: initial!important
+  
+
   
     
   
