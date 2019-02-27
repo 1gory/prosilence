@@ -14,6 +14,36 @@ $(document).ready(function () {
   $('body').on('click', '.mobile-menu__list li a', () => {
     $('.mobile-menu').fadeToggle()
   });
+  
+  $('.car .material-menu__list li').on('click', function () {
+    if ($(this).hasClass('active')) return
+        
+    $('.car .material-menu__list li').removeClass('active')
+    $(this).addClass('active')
+
+    $('.car-tabs .car-main').removeClass('active')
+    $('.car-tabs .car-main:nth-child(' + ($(this).index() + 1) + ')').addClass('active')
+    
+  });
+  
+  $('.material .material-menu__list li').on('click', function () {
+    if ($(this).hasClass('active')) return
+        
+    $('.material .material-menu__list li').removeClass('active')
+    $(this).addClass('active')
+
+    $('.material-tabs .row').removeClass('active')
+    $('.material-tabs .row:nth-child(' + ($(this).index() + 1) + ')').addClass('active')
+    
+  });
+  
+  $('.example-link').on('click', function () {
+    if ($(this).html() == 'Посмотреть фото')
+      $(this).html("Скрыть") 
+    else
+      $(this).html("Посмотреть фото")
+    $('.example-gallery').fadeToggle()
+  });
 
   $('#select-car-1-header').on('change', () => {
     if ($('#select-car-1-calc').find(":selected").val() !== '0') {
