@@ -1,4 +1,42 @@
+var carObj = [
+  {
+    name: 'Toyota',
+    types: [
+      '1-1',
+      '1-2',
+      '1-3',
+      '1-4'
+    ]
+  },
+  {
+    name: 'Волга',
+    types: [
+      '2-1',
+      '2-2',
+      '2-3',
+      '2-4'
+    ]
+  },
+]
+
+function fillFirstSelects() {
+  carObj.forEach((e, index) => {
+    $('#select-car-1-header').append('<option value="' + index + '">' + e.name + '</option>')
+    $('#select-car-1-contact').append('<option value="' + index + '">' + e.name + '</option>')
+    $('#select-car-1-calc').append('<option value="' + index + '">' + e.name + '</option>')
+  })
+}
+
+function fillSecondSelect(selector, index) {
+  $(selector).html('<option value="none">Выберите модель</option>')
+  carObj[index].types.forEach((e, index) => {
+    $(selector).append('<option value="' + e + '">' + e + '</option>')
+  })
+}
+
 $(document).ready(function () {
+  
+  fillFirstSelects()
 
   $('body').on('click', '.button-up', () => {
     window.scrollTo(0, 0)
@@ -86,8 +124,9 @@ $(document).ready(function () {
     $('.material-card__mobile').removeClass('mobile-hide')
   });
 
-  $('#select-car-1-header').on('change', () => {
-    if ($('#select-car-1-calc').find(":selected").val() !== '0') {
+  $('#select-car-1-header').on('change', () => {    
+    if ($('#select-car-1-header').find("option:selected").val() != 'none') {
+      fillSecondSelect('#select-car-2-header select', $('#select-car-1-header').find("option:selected").val())
       $('#select-car-2-header').fadeIn()
     } else {
       $('#select-car-2-header').fadeOut()
@@ -111,29 +150,37 @@ $(document).ready(function () {
   });
 
 
+  $('#select-car-1-contact').on('change', () => {
+    if ($('#select-car-1-contact').find(":selected").val() != 'none') {
+      $('#select-car-2-contact').fadeIn()
+      fillSecondSelect('#select-car-2-contact select', $('#select-car-1-contact').find("option:selected").val())
+    } else {
+      $('#select-car-2-contact').fadeOut()
+    }
+  });
+
+  $('#checkbox-1-contact').on('change', () => {
+    if (document.getElementById('checkbox-1-contact').checked) {
+      $('#select-car-3-contact').fadeIn()
+    } else {
+      $('#select-car-3-contact').fadeOut()
+    }
+  });
+
+  $('#checkbox-2-contact').on('change', () => {
+    if (document.getElementById('checkbox-2-contact').checked) {
+      $('#textarea-contact').fadeIn()
+    } else {
+      $('#textarea-contact').fadeOut()
+    }
+  });
+  
   $('#select-car-1-calc').on('change', () => {
-    console.log($('#select-car-1-calc').find(":selected").val())
-    if ($('#select-car-1-calc').find(":selected").val() !== '0') {
+    if ($('#select-car-1-calc').find(":selected").val() != 'none') {
       $('#select-car-2-calc').fadeIn()
+      fillSecondSelect('#select-car-2-calc select', $('#select-car-1-calc').find("option:selected").val())
     } else {
-      console.log('a')
       $('#select-car-2-calc').fadeOut()
-    }
-  });
-
-  $('#checkbox-1-calc').on('change', () => {
-    if (document.getElementById('checkbox-1-calc').checked) {
-      $('#select-car-3-calc').fadeIn()
-    } else {
-      $('#select-car-3-calc').fadeOut()
-    }
-  });
-
-  $('#checkbox-2-calc').on('change', () => {
-    if (document.getElementById('checkbox-2-calc').checked) {
-      $('#textarea-calc').fadeIn()
-    } else {
-      $('#textarea-calc').fadeOut()
     }
   });
 
