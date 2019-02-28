@@ -564,11 +564,16 @@ body
   padding-bottom: 100px
   background: white
   @media screen and (max-width: 991px) 
-    padding-top: 35px
+    padding-top: 35px 
   @media screen and (max-width: 767px) 
     padding-bottom: 20px
   .container
     position: relative
+    @media screen and (max-width: 991px) 
+      padding: 0px
+      .row
+        padding-left: 30px
+        padding-right: 30px
   
   .section-header.dark 
     width: 370px

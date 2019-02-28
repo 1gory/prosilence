@@ -19,6 +19,45 @@ const carObj = [
   },
 ];
 
+const examplePhotos = [
+  [
+    {
+      src: './img/hero.jpg',
+      w: 800,
+      h: 600,
+    },
+    {
+      src: './img/bg-fb.png',
+      w: 800,
+      h: 600,
+    },
+  ],
+  [
+    {
+      src: './img/hero.jpg',
+      w: 800,
+      h: 600,
+    },
+    {
+      src: './img/bg-fb.png',
+      w: 800,
+      h: 600,
+    },
+  ],
+  [
+    {
+      src: './img/hero.jpg',
+      w: 800,
+      h: 600,
+    },
+    {
+      src: './img/bg-fb.png',
+      w: 800,
+      h: 600,
+    },
+  ],
+];
+
 function fillFirstSelects() {
   carObj.forEach((e, index) => {
     $('#select-car-1-header').append(`<option value="${index}">${e.name}</option>`);
@@ -34,8 +73,22 @@ function fillSecondSelect(selector, index) {
   });
 }
 
+function initPSWP(index) {
+  const pswpElement = document.querySelectorAll('.pswp')[0];
+
+  const items = examplePhotos[index];
+  const options = {
+    index: 0,
+  };
+
+  const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+  gallery.init();
+}
+
 $(document).ready(function () {
   fillFirstSelects();
+
+  // initPSWP(0);
 
   $('body').on('click', '.button-up', () => {
     window.scrollTo(0, 0);
@@ -117,12 +170,7 @@ $(document).ready(function () {
   });
 
   $('.examples .example-link').on('click', function () {
-    if ($(this).html() === 'Посмотреть фото') {
-      $(this).html('Скрыть');
-    } else {
-      $(this).html('Посмотреть фото');
-    }
-    $('.example-gallery').fadeToggle();
+    initPSWP($(this).attr('id').split('-')[1]);
   });
 
   $('.material .example-link').on('click', function () {

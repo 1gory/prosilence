@@ -555,6 +555,12 @@ body {
       padding-bottom: 20px; } }
   .material .container {
     position: relative; }
+    @media screen and (max-width: 991px) {
+      .material .container {
+        padding: 0px; }
+        .material .container .row {
+          padding-left: 30px;
+          padding-right: 30px; } }
   .material .section-header.dark {
     width: 370px;
     margin-bottom: 70px; }
