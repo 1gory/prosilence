@@ -691,6 +691,10 @@ body {
   width: 0px;
   background: transparent; }
 
+.invisible-scrollbar-wrapper section {
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
 .feedback {
   padding-bottom: 175px;
   overflow: scroll; }
@@ -712,7 +716,7 @@ body {
     flex-wrap: nowrap; }
 
 .contact {
-  background-image: url("../img/hero.jpg");
+  background-image: url("../img/bg-fb.png");
   background-size: cover;
   background-position: center center; }
   .contact .container {
