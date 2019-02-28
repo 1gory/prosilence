@@ -133,6 +133,7 @@ body {
     .header-input__text {
       color: #1e2229;
       border: none;
+      background: white;
       width: 100%;
       height: 75px;
       padding-top: 15px;
@@ -140,7 +141,8 @@ body {
       font-size: 16px;
       padding-left: 20px;
       padding-right: 20px;
-      resize: none; }
+      resize: none;
+      border-radius: 0; }
       .header-input__text.select {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -355,7 +357,14 @@ body {
 
 .examples {
   padding-top: 70px;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  height: 855px; }
+  @media screen and (max-width: 991px) {
+    .examples {
+      height: 1290px; } }
+  @media screen and (max-width: 767px) {
+    .examples {
+      height: 950px; } }
   @media screen and (max-width: 767px) {
     .examples {
       padding-bottom: 30px; } }
@@ -382,10 +391,7 @@ body {
 .example {
   padding-top: 15px;
   padding-bottom: 15px;
-  border-color: rgba(255, 255, 255, 0.15);
-  display: none; }
-  .example.active {
-    display: flex; }
+  border-color: rgba(255, 255, 255, 0.15); }
   @media screen and (max-width: 991px) {
     .example {
       border: none; } }
@@ -581,9 +587,7 @@ body {
         margin-bottom: 40px; } }
     @media screen and (max-width: 767px) {
       .material-thumb {
-        height: 280px;
-        margin-left: -15px;
-        margin-right: -15px; } }
+        height: 280px; } }
   .material-tabs .row {
     display: none; }
     .material-tabs .row.active {
@@ -633,10 +637,14 @@ body {
           padding: 10px;
           font-size: 14px; } }
   .material-show-all {
+    display: none;
     text-align: center; }
     .material-show-all .example-link {
       color: #3e4856;
       border-color: #3e4856; }
+    @media screen and (max-width: 991px) {
+      .material-show-all {
+        display: block; } }
 
 .faq {
   padding-top: 150px;
@@ -861,6 +869,10 @@ body {
     color: white;
     font-family: "Oswald-Light", sans-serif;
     font-size: 20px; }
+    .footer-contact__text:hover {
+      color: white;
+      opacity: 0.5;
+      text-decoration: none; }
   .footer-contact__site {
     margin-top: 75px;
     margin-bottom: 30px;
@@ -892,11 +904,16 @@ body {
 .car {
   padding-top: 80px;
   position: relative;
+  height: 820px;
   margin-bottom: 160px; }
   @media screen and (max-width: 991px) {
     .car {
       padding-top: 530px;
-      margin-bottom: 60px; } }
+      margin-bottom: 60px;
+      height: 1120px; } }
+  @media screen and (max-width: 767px) {
+    .car {
+      height: 1030px; } }
   .car .material-menu {
     margin-bottom: 210px; }
     @media screen and (max-width: 991px) {

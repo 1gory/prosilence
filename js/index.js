@@ -59,9 +59,13 @@ $(document).ready(function () {
     $('.car .material-menu__list li').removeClass('active')
     $(this).addClass('active')
 
-    $('.car-tabs .car-main').removeClass('active')
-    $('.car-tabs .car-main:nth-child(' + ($(this).index() + 1) + ')').addClass('active')
-
+//    $('.car-tabs .car-main').removeClass('active')
+//    $('.car-tabs .car-main:nth-child(' + ($(this).index() + 1) + ')').addClass('active')
+    var t = $(this)
+    $.when($('.car-tabs .car-main').fadeOut(200))
+      .then(function(){
+        $('.car-tabs .car-main:nth-child(' + (t.index() + 1) + ')').fadeIn(200)  
+      });
   });
 
   $('.material .material-menu__list li').on('click', function () {
@@ -96,22 +100,32 @@ $(document).ready(function () {
     if (activeExampleTab <= 1) return
 
     activeExampleTab--
+    
+    $.when($('.examples .example-wrapper').fadeOut(200))
+      .then(function(){
+        $('.examples .example-wrapper:nth-child(' + (activeExampleTab + 1) + ')').fadeIn(200)  
+      });
 
-    $('.examples .example').removeClass('active')
-    $('.examples .example:nth-child(' + (activeExampleTab + 1) + ')').addClass('active')
+//    $('.examples .example').removeClass('active')
+//    $('.examples .example:nth-child(' + (activeExampleTab + 1) + ')').addClass('active')
   });
 
   $('.examples .examples-arrow__right').on('click', function () {
     if (activeExampleTab >= $('.example').length) return
 
     activeExampleTab++
+    
+    $.when($('.examples .example-wrapper').fadeOut(200))
+      .then(function(){
+        $('.examples .example-wrapper:nth-child(' + (activeExampleTab + 1) + ')').fadeIn(200)  
+      });
 
-    $('.examples .example').removeClass('active')
-    $('.examples .example:nth-child(' + (activeExampleTab + 1) + ')').addClass('active')
+//    $('.examples .example').removeClass('active')
+//    $('.examples .example:nth-child(' + (activeExampleTab + 1) + ')').addClass('active')
   });
 
   $('.examples .example-link').on('click', function () {
-    if ($(this).html() == 'Показать все')
+    if ($(this).html() == 'Посмотреть фото')
       $(this).html("Скрыть")
     else
       $(this).html("Посмотреть фото")
