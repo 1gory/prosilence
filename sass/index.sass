@@ -571,9 +571,16 @@ body
     position: relative
     @media screen and (max-width: 991px) 
       padding: 0px
-      .row
+      .row.mobile-margin
+        margin-left: 30px
+        margin-right: 30px
+        .col-lg-5
+          padding-left: 0px
+          padding-right: 0px
+    @media screen and (max-width: 767px) 
+      .section-header
         padding-left: 30px
-        padding-right: 30px
+      
   
   .section-header.dark 
     width: 370px
@@ -581,7 +588,6 @@ body
     @media screen and (max-width: 991px) 
       margin-bottom: 35px
     @media screen and (max-width: 767px) 
-      padding: 0
       width: 100%
     h2
       color: #3e4856
@@ -606,6 +612,9 @@ body
       height: 280px
       
   &-tabs
+    @media screen and (max-width: 991px) 
+      padding-left: 30px
+      padding-right: 30px
     .material-tab__wrapper
       display: none 
       &.active
@@ -617,6 +626,7 @@ body
     @media screen and (max-width: 767px) 
       margin-top: 40px
       margin-bottom: 20px
+      padding: 0
     &__list
       display: flex
       justify-content: space-between
@@ -624,6 +634,8 @@ body
       padding-left: 0
       @media screen and (max-width: 991px) 
         justify-content: space-around
+      @media screen and (max-width: 767px) 
+        justify-content: space-between
       li
         color: rgba(62, 72, 86, 0.75)
         font-family: 'Oswald-Regular', sans-serif
