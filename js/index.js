@@ -74,14 +74,22 @@ $(document).ready(function () {
     $('.material .material-menu__list li').removeClass('active')
     $(this).addClass('active')
 
-    $('.material-tabs .row').removeClass('active')
-    $('.material-tabs .row:nth-child(' + ($(this).index() + 1) + ')').addClass('active')
-    
-    $('.material-card__mobile:not([class*="mobile-hide"])').addClass('mobile-hide')
-    
-    $('.material .example-link').show()
+//    $('.material-tabs .row').removeClass('active')
+//    $('.material-tabs .row:nth-child(' + ($(this).index() + 1) + ')').addClass('active')
+//    
+//    $('.material-card__mobile:not([class*="mobile-hide"])').addClass('mobile-hide')
+//    
+//    $('.material .example-link').show()
+    var t = $(this)
+    $.when($('.material-tabs .material-tab__wrapper').fadeOut(200))
+      .then(function(){
+        $('.material-tabs .material-tab__wrapper:nth-child(' + (t.index() + 1) + ')').fadeIn(200)  
+        $('.material-card__mobile:not([class*="mobile-hide"])').addClass('mobile-hide')
+        $('.material .example-link').show()
+      });
 
   });
+  
   $('.calc-button').on('click', function () {
     $('.calc-inner-1').css('display', 'none') 
     $('.calc-inner-2').css('display', 'block') 
@@ -133,9 +141,15 @@ $(document).ready(function () {
   });
   
   $('.material .example-link').on('click', function () {
-    $(this).hide()  
+//    $(this).hide()
     
-    $('.material-card__mobile').removeClass('mobile-hide')
+    if ($(this).html() == 'Показать все') {
+      $(this).html('Скрыть')  
+      $('.material-card__mobile').removeClass('mobile-hide')
+    } else {
+      $(this).html('Показать все')  
+      $('.material-card__mobile').addClass('mobile-hide')  
+    }
   });
 
   $('#select-car-1-header').on('change', () => {    

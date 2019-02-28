@@ -588,10 +588,10 @@ body {
     @media screen and (max-width: 767px) {
       .material-thumb {
         height: 280px; } }
-  .material-tabs .row {
+  .material-tabs .material-tab__wrapper {
     display: none; }
-    .material-tabs .row.active {
-      display: flex; }
+    .material-tabs .material-tab__wrapper.active {
+      display: block; }
   .material-menu {
     margin-top: 130px;
     margin-bottom: 60px; }
