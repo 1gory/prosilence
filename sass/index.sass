@@ -492,14 +492,22 @@ body
       overflow: hidden
   &-bg
     position: absolute
-    left: -140px
+    left: 0
     top: 0
     height: 660px
     opacity: 0.1
   &-bg__overlay
     width: 409px
     height: 660px
-    background: linear-gradient(to right, rgba(237,237,237,0) 0%, rgba(30,35,42,1) 100%)
+    background: -moz-linear-gradient(left, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(30,34,42,0)), color-stop(100%, rgba(30,33,42,1)))
+    background: -webkit-linear-gradient(left, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
+    background: -o-linear-gradient(left, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
+    background: -ms-linear-gradient(left, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
+    background: linear-gradient(to right, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
+
+
+    
     position: absolute
     left: 235px
     top: 0
