@@ -482,19 +482,6 @@ body {
     top: 0;
     height: 660px;
     opacity: 0.1; }
-  .calc-bg__overlay {
-    width: 409px;
-    height: 660px;
-    background: -moz-linear-gradient(left, rgba(30, 34, 42, 0) 0%, #1e212a 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(30, 34, 42, 0)), color-stop(100%, #1e212a));
-    background: -webkit-linear-gradient(left, rgba(30, 34, 42, 0) 0%, #1e212a 100%);
-    background: -o-linear-gradient(left, rgba(30, 34, 42, 0) 0%, #1e212a 100%);
-    background: -ms-linear-gradient(left, rgba(30, 34, 42, 0) 0%, #1e212a 100%);
-    background: linear-gradient(to right, rgba(30, 34, 42, 0) 0%, #1e212a 100%);
-    position: absolute;
-    left: 235px;
-    top: 0;
-    z-index: 1; }
   .calc-inner {
     z-index: 2; }
   .calc-form {
@@ -947,6 +934,9 @@ body {
     @media screen and (max-width: 991px) {
       .car .material-menu {
         margin-bottom: 50px; } }
+    @media screen and (max-width: 767px) {
+      .car .material-menu__list {
+        justify-content: space-around; } }
     .car .material-menu li.active {
       color: white; }
   .car-main {
@@ -1012,84 +1002,84 @@ body {
         display: block; } }
 
 @media screen and (min-width: 992px) {
-  #car-text-1 {
+  .car-text-1 {
     top: -20px;
     left: 150px; } }
 @media screen and (max-width: 1200px) {
-  #car-text-1 {
+  .car-text-1 {
     left: 50px; } }
 
 @media screen and (min-width: 992px) {
-  #car-text-2 {
+  .car-text-2 {
     top: -110px;
     left: 520px;
     text-align: right; } }
 @media screen and (max-width: 1200px) {
-  #car-text-2 {
+  .car-text-2 {
     left: 420px; } }
-#car-text-2 svg {
+.car-text-2 svg {
   transform: scaleX(-1);
   left: -20px; }
 
 @media screen and (min-width: 992px) {
-  #car-text-3 {
+  .car-text-3 {
     top: -100px;
     left: 785px;
     text-align: right; } }
 @media screen and (max-width: 1200px) {
-  #car-text-3 {
+  .car-text-3 {
     left: 685px; } }
-#car-text-3 svg {
+.car-text-3 svg {
   transform: scaleX(-1);
   left: -30px; }
 
 @media screen and (min-width: 992px) {
-  #car-text-4 {
+  .car-text-4 {
     top: -75px;
     left: 895px;
     text-align: right; } }
 @media screen and (max-width: 1200px) {
-  #car-text-4 {
+  .car-text-4 {
     left: 795px; } }
-#car-text-4 svg {
+.car-text-4 svg {
   transform: scaleX(-1);
   left: -40px; }
 
 @media screen and (min-width: 992px) {
-  #car-text-5 {
+  .car-text-5 {
     top: 290px;
     left: 150px;
     text-align: right; } }
 @media screen and (max-width: 1200px) {
-  #car-text-5 {
+  .car-text-5 {
     left: 50px; } }
-#car-text-5 svg {
+.car-text-5 svg {
   transform: rotate(270deg);
   left: 40px;
   top: -60px; }
 
 @media screen and (min-width: 992px) {
-  #car-text-6 {
+  .car-text-6 {
     top: 195px;
     left: 450px;
     text-align: right; } }
 @media screen and (max-width: 1200px) {
-  #car-text-6 {
+  .car-text-6 {
     left: 350px; } }
-#car-text-6 svg {
+.car-text-6 svg {
   transform: rotate(270deg);
   left: 40px;
   top: -60px; }
 
 @media screen and (min-width: 992px) {
-  #car-text-7 {
+  .car-text-7 {
     top: 280px;
     left: 490px;
     text-align: right; } }
 @media screen and (max-width: 1200px) {
-  #car-text-7 {
+  .car-text-7 {
     left: 390px; } }
-#car-text-7 svg {
+.car-text-7 svg {
   transform: rotate(270deg);
   left: 80px;
   top: -60px; }

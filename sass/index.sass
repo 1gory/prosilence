@@ -3,34 +3,27 @@
     padding-left: 30px
     padding-right: 30px
 
-
 body
   margin: 0
   background-color: #1e232a
-  
 
 .menu
   position: absolute
   top: 30px
   left: 0
   width: 100%
-  
   &-logo
     width: 118px
     @media screen and (max-width: 767px) 
-      width: 101px
-      
+      width: 101px 
   &-icon
-    height: 18px
-    
+    height: 18px 
   &-social
     text-align: right
-    
     &__icon
       margin-left: 18px  
       &:hover
         opacity: 0.5  
-      
     &__phone
       font-family: 'Exo2-Medium', sans-serif
       font-size: 16px
@@ -43,7 +36,6 @@ body
         opacity: 0.5
         color: white
         text-decoration: none
-
   &-list
     padding: 0
     li
@@ -61,7 +53,6 @@ body
         margin: 0  
         @media screen and (max-width: 1200px) 
           margin-right: 40px
-        
       &.li-one
         width: 34px
         @media screen and (max-width: 1200px) 
@@ -74,12 +65,10 @@ body
         width: 124px
         @media screen and (max-width: 1200px) 
           width: auto
-          
-       
+ 
 .no-padding
   padding: 0
   
-    
 .header-wrapper
   height: 660px
   width: 100%
@@ -92,9 +81,7 @@ body
   position: relative
   @media screen and (max-width: 991px) 
     top: 120px
-  
   &-form
-    
     background-color: white
     padding: 30px
     box-shadow: 0px 15px 50px 0 rgba(0, 0, 0, 0.15)
@@ -107,7 +94,6 @@ body
       margin-left: 20px
       margin-right: 20px
       padding: 20px
-
   &-input
     border: 1px solid rgba(30, 35, 42, 0.15)
     margin-bottom: 15px
@@ -123,7 +109,6 @@ body
       border: solid 1px #ff4657
       & input
         outline: none
-        
     &__label
       display: block
       font-size: 11px
@@ -165,21 +150,17 @@ body
     font-size: 16px
     font-family: 'Exo2-Regular', sans-serif 
     padding-top: 4px
-    
   &-checkbox__small
     font-size: 14px
     font-family: 'Exo2-Regular', sans-serif 
     padding-left: 35px
     margin-bottom: 0
-    
     .checkmark
       height: 24px
       width: 24px
       background-position: center center
-      
     input:checked ~ .checkmark 
       background-position: center 1px
-      
   &-button
     background-color: #2889f0
     border: none
@@ -191,7 +172,6 @@ body
     padding: 23px
     margin-top: 10px
     margin-bottom: 20px
-    
   &-text
     font-family: 'Oswald-Medium', sans-serif  
     font-size: 48px
@@ -204,13 +184,11 @@ body
       margin-bottom: 70px
     @media screen and (max-width: 767px) 
       font-size: 36px
-    
   &-cards
     display: flex
     justify-content: space-between
     @media screen and (max-width: 767px) 
       display: block
-    
   &-card
     width: 135px
     @media screen and (max-width: 1200px) 
@@ -228,17 +206,14 @@ body
         margin-bottom: 25px
       @media screen and (max-width: 767px) 
         margin-bottom: 15px
-      
     &__text
       display: block
       font-family: 'Exo2-Medium', sans-serif
       font-size: 16px
       color: white
-      
-      
+
 .margin-30
   margin-bottom: 30px
-  
   
 .section-header
   width: 340px
@@ -259,13 +234,10 @@ body
     margin: 0
     @media screen and (max-width: 767px) 
       font-size: 24px
-    
 
-    
   &.ta-left 
     justify-content: flex-start
     margin: 0
-
     h2
       text-align: left
       
@@ -320,7 +292,6 @@ body
     padding-top: 40px
     position: relative
     height: 600px
-    
     &__wrapper
       @media screen and (max-width: 600px)
         padding: 0
@@ -342,7 +313,6 @@ body
       font-family: 'Exo2-Regular', sans-serif 
       font-size: 22px
       margin-bottom: 50px
-      
     &__list
       list-style: none
       padding-left: 0
@@ -356,7 +326,6 @@ body
           border-bottom: 1px solid rgba(255, 255, 255, 0.1)
       li:last-child span
           border-bottom: none
-        
     &__button
       background: white
       padding: 12px 35px 
@@ -365,11 +334,9 @@ body
       font-size: 16px
       position: relative
       bottom: -24px
-      
     &__background
       background: rgba(255, 255, 255, 0.03)  
-      border: none
-      
+      border: none   
       
 .examples
   padding-top: 70px
@@ -398,9 +365,7 @@ body
       opacity: 1
     @media screen and (max-width: 767px)
       margin-left: 20px
-    
-    
-    
+
 .example
   padding-top: 15px
   padding-bottom: 15px
@@ -413,7 +378,6 @@ body
     object-fit: cover
     @media screen and (max-width: 991px) 
       height: auto
-      
   &-img-container
     padding: 20px
     padding-left: 35px
@@ -422,13 +386,11 @@ body
       padding: 0
     @media screen and (max-width: 767px)
       padding: 15px
-    
   &-content
     padding-left: 5%
     color: white
     @media screen and (max-width: 767px)
       padding-left: 15px
-    
   &-header
     font-family: 'Exo2-SemiBold', sans-serif 
     font-size: 28px
@@ -437,18 +399,15 @@ body
     @media screen and (max-width: 767px)
       margin-top: 20px
       margin-bottom: 30px
-    
   &-info
     display: flex
     justify-content: flex-start
     margin-bottom: 25px
-       
     &__left
       width: 110px
       margin-right: 65px
       font-family: 'Exo2-SemiBold', sans-serif 
       font-size: 16px 
-      
     &__right
       font-family: 'Exo2-Regular', sans-serif 
       font-size: 16px
@@ -469,14 +428,11 @@ body
     @media screen and (max-width: 767px)
       margin-top: 30px
       margin-bottom: 20px
-    
     &:hover
       color: white
       text-decoration: none
       opacity: 0.8
-      
 
-  
 .calc  
   position: relative
   &-wrapper
@@ -496,22 +452,6 @@ body
     top: 0
     height: 660px
     opacity: 0.1
-  &-bg__overlay
-    width: 409px
-    height: 660px
-    background: -moz-linear-gradient(left, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(30,34,42,0)), color-stop(100%, rgba(30,33,42,1)))
-    background: -webkit-linear-gradient(left, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
-    background: -o-linear-gradient(left, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
-    background: -ms-linear-gradient(left, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
-    background: linear-gradient(to right, rgba(30,34,42,0) 0%, rgba(30,33,42,1) 100%)
-
-
-    
-    position: absolute
-    left: 235px
-    top: 0
-    z-index: 1
   &-inner
     z-index: 2
   &-form
@@ -525,7 +465,6 @@ body
       margin-bottom: 30px
       .calc-input
         width: 100%
-    
     &__half
       width: 50%
       margin-right: 15px
@@ -534,10 +473,8 @@ body
         width: 100%
       &:last-child
         margin-right: 0
-      
       & .custom-checkbox span
         color: #8e9194
-    
   &-input
     width: 50%
     margin-right: 15px
@@ -552,21 +489,18 @@ body
         background: white
     &:last-child
       margin-right: 0
-    
   &-button
     color: #1e232a
     background-color: white
     width: 220px
     @media screen and (max-width: 767px)
       width: 100%
-    
   .section-header
     width: 100%
     margin-bottom: 70px
     @media screen and (max-width: 767px)
       margin-bottom: 30px
-    
-    
+
 .material
   padding-top: 70px
   padding-bottom: 100px
@@ -588,7 +522,6 @@ body
     @media screen and (max-width: 767px) 
       .section-header
         padding-left: 30px
-      
   
   .section-header.dark 
     width: 370px
@@ -603,7 +536,6 @@ body
       font-size: 30px
       @media screen and (max-width: 767px) 
         font-size: 20px  
-    
   &-thumb
     width: 580px
     height: 370px
@@ -618,7 +550,6 @@ body
       margin-bottom: 40px
     @media screen and (max-width: 767px) 
       height: 280px
-      
   &-tabs
     @media screen and (max-width: 991px) 
       padding-left: 30px
@@ -627,7 +558,6 @@ body
       display: none 
       &.active
         display: block
-    
   &-menu
     margin-top: 130px
     margin-bottom: 60px
@@ -652,7 +582,6 @@ body
         cursor: pointer
         &.active
           color: #2889f0
-        
   &-card
     position: relative
     margin-bottom: 30px
@@ -660,7 +589,6 @@ body
       height: 260px
       width: 100%
       object-fit: cover
-      
     &__text
       background: white
       position: absolute
@@ -674,7 +602,6 @@ body
         width: 140px
         padding: 10px
         font-size: 14px
-        
   &-show-all
     display: none
     text-align: center
@@ -684,21 +611,16 @@ body
     @media screen and (max-width: 991px) 
       display: block
     
-    
-      
 .faq
   padding-top: 150px
   padding-bottom: 50px
   @media screen and (max-width: 767px)
     padding-top: 40px
     
-    
-  
   .section-header
     margin-bottom: 100px
     @media screen and (max-width: 767px)
       margin-bottom: 40px
-    
   &-card
     background-color: white
     color: #1e232a
@@ -707,7 +629,6 @@ body
     @media screen and (max-width: 991px) 
       margin-bottom: 10px
       height: auto
-    
     &__text
       position: relative
       padding-left: 60px
@@ -720,10 +641,8 @@ body
       height: 80px
       padding-top: 30px
       margin-bottom: 30px
-      
       .faq-card__icon
         top: 30px  
-      
     &__icon
       position: absolute
       top: 0
@@ -743,24 +662,19 @@ body
   overflow: scroll  
   @media screen and (max-width: 991px) 
     padding-bottom: 50px
-  
   &-header
     margin-top: 150px
     margin-bottom: 90px
     @media screen and (max-width: 991px) 
       margin-top: 20px
       margin-bottom: 50px
-  
   &-card img, &-card iframe  
     height: 250px
     width: 100%
     object-fit: cover
-    
-    
   &-row
     flex-wrap: nowrap
-    
-    
+
 .contact
   background-image: url('../img/bg-fb.png')
   background-size: cover
@@ -773,13 +687,11 @@ body
         margin: 0
       .header-form
         margin: 0
-  
   &-header
     position: absolute
     top: 0
     left: 0
     padding-top: 100px
-    
   &-inner
     & .header-form
       background: #3e4856
@@ -787,8 +699,6 @@ body
       @media screen and (max-width: 991px) 
         margin-top: 0
         height: auto
-      
-      
   &-form__mobile
     h3
       font-size: 24px
@@ -801,7 +711,7 @@ body
       font-size: 16px
       font-family: 'Exo2-Regular', sans-serif
       margin-bottom: 40px
-    
+
 .section-subheader
   font-size: 16px
   font-family: 'Exo2-Regular', sans-serif 
@@ -821,7 +731,6 @@ body
       color: rgba(255, 255, 255, 0.3)
   select 
     color: rgba(255, 255, 255, 0.3)
-    
   &.disabled
     background-color: #353940
     input
@@ -863,7 +772,6 @@ body
 .footer
   padding-top: 40px
   position: relative
-  
   &-menu
     list-style: none
     display: flex
@@ -875,7 +783,6 @@ body
       display: block
     @media screen and (max-width: 767px)
       margin-bottom: 30px
-
     li 
       @media screen and (max-width: 991px) 
         display: inline-block
@@ -895,7 +802,6 @@ body
           color: #2889f0
           text-decoration: none
           opacity: 0.8
-      
   &-contact
     &__block
       display: flex
@@ -903,12 +809,10 @@ body
       margin-bottom: 50px
       @media screen and (max-width: 991px) 
         margin-bottom: 20px
-      
     &__icon
       display: block
       margin-top: -45px
       margin-right: 20px
-      
     &__header
       color: rgba(255, 255, 255, 0.5)
       font-size: 12px
@@ -917,7 +821,6 @@ body
       margin-bottom: 20px
       @media screen and (max-width: 991px) 
         margin-bottom: 10px
-      
     &__text
       color: white
       font-family: "Oswald-Light", sans-serif
@@ -926,14 +829,12 @@ body
         color: white
         opacity: 0.5
         text-decoration: none
-      
     &__site
       margin-top: 75px
       margin-bottom: 30px
       font-family: 'Exo2-Regular', sans-serif 
       font-size: 14px
       color: rgba(255, 255, 255, 0.25)
-        
   &-map
     position: absolute
     bottom: 0
@@ -963,11 +864,13 @@ body
     height: 1120px
   @media screen and (max-width: 767px) 
     height: 1030px
-  
   .material-menu
     margin-bottom: 210px
     @media screen and (max-width: 991px) 
-      margin-bottom: 50px
+      margin-bottom: 50px 
+    &__list
+      @media screen and (max-width: 767px) 
+        justify-content: space-around
     li.active
       color: white
   &-main
@@ -979,7 +882,6 @@ body
         display: none 
     &.active
       display: block
-      
   &-text
     position: absolute
     text-align: left
@@ -1027,13 +929,13 @@ body
     @media screen and (max-width: 991px) 
       display: block
    
-#car-text-1
+.car-text-1
   @media screen and (min-width: 992px) 
     top: -20px
     left: 150px
   @media screen and (max-width: 1200px) 
     left: 50px  
-#car-text-2
+.car-text-2
   @media screen and (min-width: 992px) 
     top: -110px
     left: 520px
@@ -1043,7 +945,7 @@ body
   svg
     transform: scaleX(-1)
     left: -20px
-#car-text-3
+.car-text-3
   @media screen and (min-width: 992px) 
     top: -100px
     left: 785px
@@ -1053,7 +955,7 @@ body
   svg
     transform: scaleX(-1)
     left: -30px
-#car-text-4
+.car-text-4
   @media screen and (min-width: 992px) 
     top: -75px
     left: 895px
@@ -1063,7 +965,7 @@ body
   svg
     transform: scaleX(-1)
     left: -40px
-#car-text-5
+.car-text-5
   @media screen and (min-width: 992px) 
     top: 290px
     left: 150px
@@ -1074,7 +976,7 @@ body
     transform: rotate(270deg)
     left: 40px
     top: -60px
-#car-text-6
+.car-text-6
   @media screen and (min-width: 992px) 
     top: 195px
     left: 450px
@@ -1085,7 +987,7 @@ body
     transform: rotate(270deg)
     left: 40px
     top: -60px
-#car-text-7
+.car-text-7
   @media screen and (min-width: 992px) 
     top: 280px
     left: 490px
@@ -1096,7 +998,6 @@ body
     transform: rotate(270deg)
     left: 80px
     top: -60px
-  
       
 .button-up
   position: fixed
@@ -1109,11 +1010,9 @@ body
   justify-content: center
   align-items: center
   z-index: 122
-  
   img
     width: 20px
     height: 20px
-    
     
 .mobile-nav
   @media screen and (max-width: 991px) 
@@ -1132,7 +1031,6 @@ body
   background: #0e1219
   z-index: 123
   display: none
-  
   &__list
     list-style: none
     margin-top: 50px
@@ -1142,8 +1040,7 @@ body
         color: white
         text-decoration: none
         font-family: "Oswald-Regular", sans-serif
-        font-size: 16px
-        
+        font-size: 16px 
   &__button
     position: absolute
     top: 45px
@@ -1154,7 +1051,6 @@ body
     bottom: 60px
     left: 0
     width: 100%
-    
     a:last-child
       margin-right: 20px
     
@@ -1193,7 +1089,6 @@ body
     font-size: 16px
     color: #2889f0
     margin-top: 160px
-    
 .form-fail
   .form-success__icon 
     border: 1px solid #ff4657
@@ -1205,8 +1100,6 @@ body
     display: block
     margin: auto
     
-
-    
 .mobile-hide
   @media screen and (max-width: 991px) 
     display: none
@@ -1215,8 +1108,6 @@ body
   @media screen and (max-width: 991px) 
     display: block
 
-    
-    
 .slick-list
   overflow: initial!important
   
@@ -1224,12 +1115,10 @@ body
   display: none
   .calc-input
     width: 100%
-    
     input::placeholder
       color: #55595f
   .custom-checkbox
     color: white
-    
   .about-text
     margin-bottom: 50px
 .calc-back
@@ -1252,18 +1141,3 @@ body
     margin-top: 20px
     justify-content: flex-end
     width: 100%
-  
-
-  
-    
-  
-  
-      
-      
-
-          
-      
-          
-  
-  
-  

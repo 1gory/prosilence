@@ -88,8 +88,6 @@ function initPSWP(index) {
 $(document).ready(function () {
   fillFirstSelects();
 
-  // initPSWP(0);
-
   $('body').on('click', '.button-up', () => {
     window.scrollTo(0, 0);
   });
@@ -208,7 +206,6 @@ $(document).ready(function () {
     }
   });
 
-
   $('#select-car-1-contact').on('change', () => {
     if ($('#select-car-1-contact').find(':selected').val() !== 'none') {
       $('#select-car-2-contact').fadeIn();
@@ -248,12 +245,10 @@ $(document).ready(function () {
 
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
-
   $('html, body').animate({
     scrollTop: $($.attr(this, 'href')).offset().top,
   }, 500);
 });
-
 
 function mobileOnlySliders() {
   $('.slick-prices').slick({
@@ -295,7 +290,6 @@ function mobileOnlySliders() {
     }],
   });
 }
-
 
 $(window).resize(function () {
   if (window.innerWidth < 992) {
