@@ -1,4 +1,5 @@
 let priceSwiper;
+let feedbackSwiper;
 
 const carObj = [
   {
@@ -85,6 +86,13 @@ function initPSWP(index) {
 
   const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
   gallery.init();
+}
+
+function mobileOnlySliders() {
+  priceSwiper = new Swiper('.prices-swiper', {
+    initialSlide: 1,
+  });
+  feedbackSwiper = new Swiper('.feedback-swiper', {});
 }
 
 $(document).ready(function () {
@@ -248,9 +256,7 @@ $(document).ready(function () {
   $('.header-input__phone').inputmask('+7 999 999 99 99');
 
   if (window.innerWidth < 992) {
-    priceSwiper = new Swiper('.swiper-container', {
-      initialSlide: 1,
-    });
+    mobileOnlySliders();
   }
 });
 
@@ -261,37 +267,13 @@ $(document).on('click', 'a[href^="#"]', function (event) {
   }, 500);
 });
 
-function mobileOnlySliders() {
-  $('.slick-fb').slick({
-    dots: false,
-    arrows: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: false,
-    initialSlide: 0,
-    responsive: [{
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false,
-      },
-    }],
-  });
-}
-
 $(window).resize(function () {
   if (window.innerWidth < 992) {
-    if (!$('.swiper-container').hasClass('swiper-container-initialized')) {
+    if (!$('.prices-swiper').hasClass('swiper-container-initialized')) {
       mobileOnlySliders();
-      priceSwiper = new Swiper('.swiper-container', {
-        initialSlide: 1,
-      });
     }
-  } else if ($('.swiper-container').hasClass('swiper-container-initialized')) {
+  } else if ($('.prices-swiper').hasClass('swiper-container-initialized')) {
     priceSwiper.destroy(true, true);
+    feedbackSwiper.destroy(true, true);
   }
 });
