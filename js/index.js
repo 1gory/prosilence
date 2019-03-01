@@ -122,11 +122,14 @@ $(document).ready(function () {
     $('.material .material-menu__list li').removeClass('active');
     $(this).addClass('active');
 
+    $('.material-tabs').css('height', `${$('.material-tabs').height()}px`);
+
     const that = $(this);
     $.when($('.material-tabs .material-tab__wrapper').fadeOut(200))
       .then(function () {
         $(`.material-tabs .material-tab__wrapper:nth-child(${that.index() + 1})`).fadeIn(200);
         $('.material-card__mobile:not([class*="mobile-hide"])').addClass('mobile-hide');
+        $('.material-tabs').css('height', 'auto');
         $('.material .example-link').show();
       });
   });
