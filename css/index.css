@@ -578,7 +578,6 @@ body {
   .material-thumb {
     width: 580px;
     height: 370px;
-    object-fit: cover;
     position: absolute;
     top: -230px;
     right: 0; }
