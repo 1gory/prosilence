@@ -1,3 +1,5 @@
+let priceSwiper;
+
 const carObj = [
   {
     name: 'Toyota',
@@ -244,6 +246,12 @@ $(document).ready(function () {
   });
 
   $('.header-input__phone').inputmask('+7 999 999 99 99');
+
+  if (window.innerWidth < 992) {
+    priceSwiper = new Swiper('.swiper-container', {
+      initialSlide: 1,
+    });
+  }
 });
 
 $(document).on('click', 'a[href^="#"]', function (event) {
@@ -254,25 +262,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 });
 
 function mobileOnlySliders() {
-  $('.slick-prices').slick({
-    dots: false,
-    arrows: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: false,
-    initialSlide: 1,
-    responsive: [{
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false,
-      },
-    }],
-  });
   $('.slick-fb').slick({
     dots: false,
     arrows: false,
@@ -296,10 +285,13 @@ function mobileOnlySliders() {
 
 $(window).resize(function () {
   if (window.innerWidth < 992) {
-    if (!$('.slick-prices').hasClass('slick-initialized')) {
+    if (!$('.swiper-container').hasClass('swiper-container-initialized')) {
       mobileOnlySliders();
+      priceSwiper = new Swiper('.swiper-container', {
+        initialSlide: 1,
+      });
     }
-  } else if ($('.slick-prices').hasClass('slick-initialized')) {
-    $('.slick-prices').slick('unslick');
+  } else if ($('.swiper-container').hasClass('swiper-container-initialized')) {
+    priceSwiper.destroy(true, true);
   }
 });
