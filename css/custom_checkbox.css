@@ -7,32 +7,43 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
-  .custom-checkbox a {
-    color: #2889f0;
-    text-decoration: none; }
-  .custom-checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0; }
-  .custom-checkbox .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 32px;
-    width: 32px;
-    background-color: #eee;
-    border: 1px solid #eee; }
-  .custom-checkbox input:checked ~ .checkmark {
-    background-image: url("../img/icons/Evericons-used/check-mark-blue.svg");
-    background-position: center 5px; }
+  user-select: none;
+}
+
+.custom-checkbox a {
+  color: #2889f0;
+  text-decoration: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  background-color: #eee;
+  border: 1px solid #eee;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-image: url("../img/icons/Evericons-used/check-mark-blue.svg");
+  background-position: center 5px;
+}
 
 .custom-checkbox.dark input:checked ~ .checkmark {
-  background-image: url("../img/icons/Evericons-used/check-mark-white.svg"); }
+  background-image: url("../img/icons/Evericons-used/check-mark-white.svg");
+}
+
 .custom-checkbox.dark .checkmark {
   background: #353940;
-  border: 1px solid #353940; }
-
+  border: 1px solid #353940;
+}
 /*# sourceMappingURL=custom_checkbox.css.map */

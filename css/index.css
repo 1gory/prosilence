@@ -1180,8 +1180,6 @@ body {
 .feedback-card img, .feedback-card iframe {
   height: 250px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .feedback-row {
