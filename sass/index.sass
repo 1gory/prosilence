@@ -272,7 +272,7 @@ body
   padding-top: 0
   padding-bottom: 100px
   @media screen and (max-width: 991px) 
-    overflow: scroll
+    overflow: hidden
     
   &-header
     margin-top: 160px
@@ -584,6 +584,7 @@ body
   &-card
     position: relative
     margin-bottom: 30px
+    box-shadow: 0 7px 15px 0 rgba(1,1,1,0.1)
     &__image
       height: 260px
       width: 100%
@@ -595,10 +596,11 @@ body
       left: 15px
       padding: 15px 
       font-family: 'Exo2-SemiBold', sans-serif 
-      width: 240px
-      padding-right: 70px
+      width: 245px
+      padding-right: 20px
+      opacity: 0.95
       @media screen and (max-width: 991px) 
-        width: 140px
+        width: 160px
         padding: 10px
         font-size: 14px
   &-show-all
@@ -624,7 +626,7 @@ body
     background-color: white
     color: #1e232a
     padding-bottom: 35px
-    height: 465px
+    height: 300px
     @media screen and (max-width: 991px) 
       margin-bottom: 10px
       height: auto
@@ -658,7 +660,7 @@ body
   
 .feedback
   padding-bottom: 175px
-  overflow: scroll  
+  overflow: hidden
   @media screen and (max-width: 991px) 
     padding-bottom: 50px
   &-header
@@ -1145,3 +1147,50 @@ body
   .swiper-wrapper
     margin-left: -5px
     margin-right: 0
+
+.swipe-icon
+  display: none
+  @media screen and (max-width: 991px)
+    display: block
+    width: 22px
+    fill: #bebebe
+    position: absolute
+    top: 10px
+    right: 10px
+    animation-name: swipe-icon-animation
+    animation-duration: 1.5s
+    animation-timing-function: ease
+    animation-delay: 0s
+    animation-iteration-count: infinite
+    animation-direction: normal
+    animation-fill-mode: none
+    animation-play-state: running
+
+    @keyframes swipe-icon-animation
+      0%
+        -webkit-transform: translate3d(-20px, 0, 0)
+        transform: translate3d(-20px, 0, 0)
+        opacity: 0
+      10%
+        -webkit-transform: translate3d(-20px, 0, 0)
+        transform: translate3d(-20px, 0, 0)
+        opacity: 0
+      20%
+        -webkit-transform: translate3d(-20px, 0, 0)
+        transform: translate3d(-20px, 0, 0)
+        opacity: 0.5
+      70%
+        transform: translate3d(0, 0, 0)
+        opacity: 0.5
+      80%
+        -webkit-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+        opacity: 0.5
+      81%
+        -webkit-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+        opacity: 0
+      100%
+        -webkit-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+        opacity: 0

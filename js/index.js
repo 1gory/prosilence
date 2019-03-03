@@ -1,26 +1,7 @@
+const carObj = require('./models.json');
+
 let priceSwiper;
 let feedbackSwiper;
-
-const carObj = [
-  {
-    name: 'Toyota',
-    types: [
-      '1-1',
-      '1-2',
-      '1-3',
-      '1-4',
-    ],
-  },
-  {
-    name: 'Волга',
-    types: [
-      '2-1',
-      '2-2',
-      '2-3',
-      '2-4',
-    ],
-  },
-];
 
 const examplePhotos = [
   [
