@@ -167,7 +167,7 @@ body {
 .header-input__label {
   display: block;
   font-size: 11px;
-  font-family: "Exo2-Bold", sans-serif;
+  font-family: "Exo2-SemiBold", sans-serif;
   text-transform: uppercase;
   color: #1e2229;
   position: absolute;
@@ -408,7 +408,6 @@ body {
   text-align: center;
   padding-top: 40px;
   position: relative;
-  height: 600px;
 }
 @media screen and (max-width: 600px) {
   .prices-card__wrapper {
@@ -419,7 +418,7 @@ body {
 }
 .prices-card__header {
   color: white;
-  font-family: "Exo2-Bold", sans-serif;
+  font-family: "Exo2-SemiBold", sans-serif;
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -593,14 +592,15 @@ body {
   margin-bottom: 0;
 }
 .example-link {
-  text-decoration: none;
   display: inline-block;
+  padding-bottom: 15px;
+  margin-top: 60px;
+  text-decoration: none;
   font-family: "Exo2-Regular", sans-serif;
   font-size: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   color: white;
-  padding-bottom: 15px;
-  margin-top: 60px;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .example-link {
@@ -878,6 +878,7 @@ body {
   text-align: center;
 }
 .material-show-all .example-link {
+  cursor: pointer;
   color: #3e4856;
   border-color: #3e4856;
 }
@@ -953,10 +954,11 @@ body {
 
 .feedback {
   padding-bottom: 175px;
-  overflow: hidden;
+  overflow: scroll;
 }
 @media screen and (max-width: 991px) {
   .feedback {
+    overflow: hidden;
     padding-bottom: 50px;
   }
 }
@@ -979,7 +981,7 @@ body {
 }
 
 .contact {
-  background-image: url("../img/bg-fb.png");
+  background-image: url("../img/form-bg.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -1174,7 +1176,7 @@ body {
 .footer-contact__header {
   color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
-  font-family: "Exo2-Bold", sans-serif;
+  font-family: "Exo2-SemiBold", sans-serif;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -1576,7 +1578,7 @@ body {
   border: 1px solid #ff4657;
 }
 .form-fail__phone {
-  font-family: "Exo2-Bold", sans-serif;
+  font-family: "Exo2-SemiBold", sans-serif;
   font-size: 16px;
   text-align: center;
   color: #2889f0;

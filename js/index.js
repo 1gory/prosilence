@@ -1,46 +1,8 @@
 const carObj = require('./models.json');
+const examplePhotos = require('./examples.js').default;
 
 let priceSwiper;
 let feedbackSwiper;
-
-const examplePhotos = [
-  [
-    {
-      src: './img/hero.jpg',
-      w: 800,
-      h: 600,
-    },
-    {
-      src: './img/bg-fb.png',
-      w: 800,
-      h: 600,
-    },
-  ],
-  [
-    {
-      src: './img/hero.jpg',
-      w: 800,
-      h: 600,
-    },
-    {
-      src: './img/bg-fb.png',
-      w: 800,
-      h: 600,
-    },
-  ],
-  [
-    {
-      src: './img/hero.jpg',
-      w: 800,
-      h: 600,
-    },
-    {
-      src: './img/bg-fb.png',
-      w: 800,
-      h: 600,
-    },
-  ],
-];
 
 function fillFirstSelects() {
   carObj.forEach((e, index) => {

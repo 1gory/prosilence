@@ -1,0 +1,45 @@
+.video-js {
+  font-size: 10px;
+  color: #fff;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+  font-size: 3em;
+  line-height: 1.5em;
+  height: 1.5em;
+  width: 3em;
+  border: 0.06666em solid #fff;
+  border-radius: 0.3em;
+  left: 50%;
+  top: 50%;
+  margin-left: -1.5em;
+  margin-top: -0.75em;
+}
+
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+  background-color: #2B333F;
+  background-color: rgba(43, 51, 63, 0.7);
+}
+
+.video-js .vjs-slider {
+  background-color: #73859f;
+  background-color: rgba(115, 133, 159, 0.5);
+}
+
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+  background: #fff;
+}
+
+.video-js .vjs-load-progress {
+  background: #bfc7d3;
+  background: rgba(115, 133, 159, 0.5);
+}
+
+.video-js .vjs-load-progress div {
+  background: white;
+  background: rgba(115, 133, 159, 0.75);
+}
