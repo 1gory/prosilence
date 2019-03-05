@@ -38,8 +38,32 @@ function mobileOnlySliders() {
   feedbackSwiper = new Swiper('.feedback-swiper', {});
 }
 
+function fillCarTabs() {
+  Object.keys(economPrices).forEach((e, index) => {
+    $(`.car-main:eq(0) .car-text-${index + 1} h4`).html(`от ${economPrices[e]} ₽`);
+  });
+
+  Object.keys(standartPrices).forEach((e, index) => {
+    $(`.car-main:eq(1) .car-text-${index + 1} h4`).html(`от ${standartPrices[e]} ₽`);
+  });
+
+  Object.keys(premiumPrices).forEach((e, index) => {
+    $(`.car-main:eq(2) .car-text-${index + 1} h4`).html(`от ${premiumPrices[e]} ₽`);
+  });
+}
+
+function fillPackPrices() {
+  $('.prices-card__wrapper:eq(0) .prices-card__price').html(`От ${economPackPrice} руб`);
+  $('.prices-card__wrapper:eq(1) .prices-card__price').html(`От ${standartPackPrice} руб`);
+  $('.prices-card__wrapper:eq(2) .prices-card__price').html(`От ${premiumPackPrice} руб`);
+}
+
 $(document).ready(function () {
   fillFirstSelects();
+
+  fillCarTabs();
+
+  fillPackPrices();
 
   $('body').on('click', '.button-up', () => {
     window.scrollTo(0, 0);
@@ -124,7 +148,6 @@ $(document).ready(function () {
   });
 
   $('.gallery-link').on('click', function () {
-    console.log($(this).data('id') - 1);
     initPSWP($(this).data('id') - 1);
   });
 
