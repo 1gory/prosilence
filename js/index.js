@@ -123,8 +123,9 @@ $(document).ready(function () {
       });
   });
 
-  $('.examples .example-link').on('click', function () {
-    initPSWP($(this).attr('id').split('-')[1]);
+  $('.gallery-link').on('click', function () {
+    console.log($(this).data('id') - 1);
+    initPSWP($(this).data('id') - 1);
   });
 
   $('.material .example-link').on('click', function () {
@@ -201,6 +202,8 @@ $(document).ready(function () {
   if (window.innerWidth < 992) {
     mobileOnlySliders();
   }
+
+  $('.video-js').map((elem, i) => (videojs(i)));
 });
 
 $(document).on('click', 'a[href^="#"]', function (event) {
