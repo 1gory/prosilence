@@ -188,7 +188,12 @@ $(document).ready(function () {
   });
 
   $('.modal-overlay').on('click', function () {
-    $(this).parent('.modal').fadeOut();
+    const that = $(this);
+    $.when($(this).parent('.modal').fadeOut())
+      .then(function () {
+        $(that).siblings('.form-success').hide();
+        $(that).siblings('.form-main').show();
+      });
   });
 
   let activeExampleTab = 1;

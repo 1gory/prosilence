@@ -2207,6 +2207,10 @@ body {
   }
 }
 
+.modal .form-success .form-success__icon, .modal .form-success .form-success__button {
+  margin-top: 20px;
+}
+
 .modal-text {
   z-index: 2000;
 }
