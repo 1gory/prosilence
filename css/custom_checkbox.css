@@ -10,11 +10,6 @@
   user-select: none;
 }
 
-.custom-checkbox a {
-  color: #2889f0;
-  text-decoration: none;
-}
-
 .custom-checkbox input {
   position: absolute;
   opacity: 0;
@@ -45,5 +40,19 @@
 .custom-checkbox.dark .checkmark {
   background: #353940;
   border: 1px solid #353940;
+}
+
+.open-modal {
+  color: #2889f0;
+  cursor: pointer;
+}
+
+.open-modal.small {
+  font-size: 14px;
+  font-family: 'Exo2-Regular', sans-serif;
+}
+
+.header-checkbox__small {
+  display: inline-block;
 }
 /*# sourceMappingURL=custom_checkbox.css.map */

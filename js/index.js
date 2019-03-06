@@ -58,12 +58,68 @@ function fillPackPrices() {
   $('.prices-card__wrapper:eq(2) .prices-card__price').html(`От ${premiumPackPrice} руб`);
 }
 
+function validateForm(container) {
+  let result = true;
+  $(`.${container} .header-form .header-input`).removeClass('validation-fail');
+  $(`.${container} .header-form .header-button`).attr('disabled', 'true');
+
+  const nameValue = $(`.${container} .header-form .input-name input`).val();
+  if (!nameValue || nameValue.length <= 0) {
+    $(`.${container} .header-form .input-name`).addClass('validation-fail');
+    result = false;
+  }
+
+  const phoneValue = $(`.${container} .header-form .input-phone input`).val();
+  if (!phoneValue || phoneValue.indexOf('_') > -1) {
+    $(`.${container} .header-form .input-phone`).addClass('validation-fail');
+    result = false;
+  }
+
+  const checkbox = $(`.${container} .header-form .input-checkbox input`).is(':checked');
+  if (!checkbox) {
+    result = false;
+  }
+
+  return result;
+}
+
 $(document).ready(function () {
   fillFirstSelects();
 
   fillCarTabs();
 
   fillPackPrices();
+
+  $('.header-form .header-button').on('click', function () {
+    const container = $(this).attr('id').split('-')[2];
+    const validation = validateForm(container);
+
+    if (!validation) {
+      $(`.${container} .header-form .header-button`).removeAttr('disabled');
+      return;
+    }
+
+    $.ajax({
+      type: 'post',
+      url: '/order',
+    })
+      .done(function (response) {
+        $(`.${container} .header-form .header-button`).removeAttr('disabled');
+
+        $.when($(`.${container} .header-form.form-main`).fadeOut())
+          .then(function () {
+            $(`.${container} .header-form.form-success`).fadeIn();
+          });
+      })
+      .fail(function (error) {
+        $(`.${container} .header-form .header-button`).removeAttr('disabled');
+
+        $.when($(`.${container} .header-form.form-main`).fadeOut())
+          .then(function () {
+            $(`.${container} .header-form.form-fail`).fadeIn();
+          });
+      });
+  });
 
   $('body').on('click', '.button-up', () => {
     window.scrollTo(0, 0);
@@ -121,6 +177,18 @@ $(document).ready(function () {
     $('.calc-inner-1').css('display', 'block');
     $('.calc-inner-2').css('display', 'none');
     $('.calc-back').css('display', 'none');
+  });
+
+  $('.prices-card__button button').on('click', function () {
+    $('.modal-form').fadeIn();
+  });
+
+  $('.open-modal').on('click', function () {
+    $('.modal-text').fadeIn();
+  });
+
+  $('.modal-overlay').on('click', function () {
+    $(this).parent('.modal').fadeOut();
   });
 
   let activeExampleTab = 1;
