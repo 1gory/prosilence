@@ -61,6 +61,7 @@ function fillPackPrices() {
 function validateForm(container) {
   let result = true;
   $(`.${container} .header-form .header-input`).removeClass('validation-fail');
+  $(`.${container} .header-form .input-checkbox .checkmark`).removeClass('validation-fail');
   $(`.${container} .header-form .header-button`).attr('disabled', 'true');
 
   const nameValue = $(`.${container} .header-form .input-name input`).val();
@@ -77,6 +78,7 @@ function validateForm(container) {
 
   const checkbox = $(`.${container} .header-form .input-checkbox input`).is(':checked');
   if (!checkbox) {
+    $(`.${container} .header-form .input-checkbox .checkmark`).addClass('validation-fail');
     result = false;
   }
 
@@ -189,10 +191,19 @@ $(document).ready(function () {
 
   $('.modal-overlay').on('click', function () {
     const that = $(this);
-    $.when($(this).parent('.modal').fadeOut())
+    $.when($(this).parent('.header-form__wrapper').parent('.modal').fadeOut())
       .then(function () {
         $(that).siblings('.form-success').hide();
         $(that).siblings('.form-main').show();
+      });
+  });
+
+  $('.form-success__button').on('click', function () {
+    const that = $(this);
+    $.when($(this).parent('.form-success').fadeOut())
+      .then(function () {
+        $(that).parent('.form-success').siblings('.form-success').hide();
+        $(that).parent('.form-success').siblings('.form-main').show();
       });
   });
 

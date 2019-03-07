@@ -55,4 +55,8 @@
 .header-checkbox__small {
   display: inline-block;
 }
+
+.header-checkbox__small .validation-fail {
+  border: solid 1px #ff4657 !important;
+}
 /*# sourceMappingURL=custom_checkbox.css.map */
