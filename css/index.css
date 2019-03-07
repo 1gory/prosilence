@@ -1938,6 +1938,12 @@ body {
   height: 30px;
 }
 
+@media screen and (max-width: 600px) {
+  .form-success__icon {
+    margin-top: 20px;
+  }
+}
+
 .form-success__header {
   font-size: 24px;
   font-family: 'Exo2-SemiBold', sans-serif;
@@ -1954,6 +1960,13 @@ body {
   padding-right: 45px;
 }
 
+@media screen and (max-width: 600px) {
+  .form-success__text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .form-success__button {
   background: none;
   border: none;
@@ -1964,6 +1977,12 @@ body {
   font-size: 16px;
   color: #2889f0;
   margin-top: 160px;
+}
+
+@media screen and (max-width: 600px) {
+  .form-success__button {
+    margin-top: 20px;
+  }
 }
 
 .form-fail .form-success__icon {

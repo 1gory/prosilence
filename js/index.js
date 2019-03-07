@@ -170,9 +170,7 @@ $(document).ready(function () {
   });
 
   $('.calc-button').on('click', function () {
-    $('.calc-inner-1').css('display', 'none');
-    $('.calc-inner-2').css('display', 'block');
-    $('.calc-back').css('display', 'flex');
+    $('.modal-form').fadeIn();
   });
 
   $('.calc-back').on('click', function () {
