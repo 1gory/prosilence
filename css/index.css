@@ -1916,7 +1916,7 @@ body {
   margin-right: 20px;
 }
 
-.form-success__icon {
+.form-alt__icon {
   height: 100px;
   width: 100px;
   margin: auto;
@@ -1934,24 +1934,24 @@ body {
   margin-top: 120px;
 }
 
-.form-success__icon img {
+.form-alt__icon img {
   height: 30px;
 }
 
 @media screen and (max-width: 600px) {
-  .form-success__icon {
+  .form-alt__icon {
     margin-top: 20px;
   }
 }
 
-.form-success__header {
+.form-alt__header {
   font-size: 24px;
   font-family: 'Exo2-SemiBold', sans-serif;
   text-align: center;
   margin-top: 40px;
 }
 
-.form-success__text {
+.form-alt__text {
   font-family: 'Exo2-Regular', sans-serif;
   font-size: 16px;
   text-align: center;
@@ -1961,13 +1961,13 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .form-success__text {
+  .form-alt__text {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-.form-success__button {
+.form-alt__button {
   background: none;
   border: none;
   border-bottom: 1px dashed #2889f0;
@@ -1980,12 +1980,12 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .form-success__button {
+  .form-alt__button {
     margin-top: 20px;
   }
 }
 
-.form-fail .form-success__icon {
+.form-fail .form-alt__icon {
   border: 1px solid #ff4657;
 }
 
@@ -2225,7 +2225,7 @@ body {
   }
 }
 
-.modal .form-success .form-success__icon, .modal .form-success .form-success__button {
+.modal .form-alt .form-alt__icon, .modal .form-alt .form-alt__button {
   margin-top: 20px;
 }
 

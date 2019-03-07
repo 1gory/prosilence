@@ -85,6 +85,8 @@ function validateForm(container) {
   return result;
 }
 
+let modalFormTarget = '';
+
 $(document).ready(function () {
   fillFirstSelects();
 
@@ -92,8 +94,12 @@ $(document).ready(function () {
 
   fillPackPrices();
 
-  $('.header-form .header-button').on('click', function () {
-    const container = $(this).attr('id').split('-')[2];
+  $('.form').on('submit', function (event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    console.log($(this))
+    const container = $(this).children('.header-button').attr('id').split('-')[2];
+
     const validation = validateForm(container);
 
     if (!validation) {
@@ -104,6 +110,61 @@ $(document).ready(function () {
     $.ajax({
       type: 'post',
       url: '/order',
+      data: $(this).serialize(),
+    })
+      .done(function (response) {
+        $(`.${container} .header-form .header-button`).removeAttr('disabled');
+
+        $.when($(`.${container} .header-form.form-main`).fadeOut())
+          .then(function () {
+            $(`.${container} .header-form.form-success`).fadeIn();
+          });
+      })
+      .fail(function (error) {
+        $(`.${container} .header-form .header-button`).removeAttr('disabled');
+
+        $.when($(`.${container} .header-form.form-main`).fadeOut())
+          .then(function () {
+            $(`.${container} .header-form.form-fail`).fadeIn();
+          });
+      });
+  });
+
+  $('.form-modal').on('submit', function (event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const container = $(this).children('.header-button').attr('id').split('-')[2];
+
+    const validation = validateForm(container);
+
+    if (!validation) {
+      $(`.${container} .header-form .header-button`).removeAttr('disabled');
+      return;
+    }
+
+    let serializedData = $(this).serialize();
+
+    switch (modalFormTarget) {
+      case 'prices-2':
+        serializedData += '&services=2';
+        break;
+      case 'prices-3':
+        serializedData += '&services=3';
+        break;
+      case 'prices-4':
+        serializedData += '&services=4';
+        break;
+      case 'calc':
+        serializedData += `&${$('.form-calc').serialize()}`;
+        break;
+      default:
+        break;
+    }
+
+    $.ajax({
+      type: 'post',
+      url: '/order',
+      data: serializedData,
     })
       .done(function (response) {
         $(`.${container} .header-form .header-button`).removeAttr('disabled');
@@ -170,6 +231,7 @@ $(document).ready(function () {
   });
 
   $('.calc-button').on('click', function () {
+    modalFormTarget = 'calc';
     $('.modal-form').fadeIn();
   });
 
@@ -180,6 +242,7 @@ $(document).ready(function () {
   });
 
   $('.prices-card__button button').on('click', function () {
+    modalFormTarget = $(this).attr('id');
     $('.modal-form').fadeIn();
   });
 
@@ -191,17 +254,17 @@ $(document).ready(function () {
     const that = $(this);
     $.when($(this).parent('.header-form__wrapper').parent('.modal').fadeOut())
       .then(function () {
-        $(that).siblings('.form-success').hide();
+        $(that).siblings('.form-alt').hide();
         $(that).siblings('.form-main').show();
       });
   });
 
-  $('.form-success__button').on('click', function () {
+  $('.form-alt__button').on('click', function () {
     const that = $(this);
-    $.when($(this).parent('.form-success').fadeOut())
+    $.when($(this).parent('.form-alt').fadeOut())
       .then(function () {
-        $(that).parent('.form-success').siblings('.form-success').hide();
-        $(that).parent('.form-success').siblings('.form-main').show();
+        $(that).parent('.form-alt').siblings('.form-alt').hide();
+        $(that).parent('.form-alt').siblings('.form-main').show();
       });
   });
 

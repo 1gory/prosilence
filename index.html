@@ -172,23 +172,24 @@
           </div>
         </div>
         <div class="col-lg-5 offset-lg-2 header-form form-main">
+          <form class='form'>
           <div class="header-input input-name">
             <label class="header-input__label">Имя <span>*</span></label>
-            <input type="text" class="header-input__text" placeholder="Имя">
+            <input type="text" class="header-input__text" placeholder="Имя" name='name'>
           </div>
           <div class="header-input input-phone">
             <label class="header-input__label">Телефон <span>*</span></label>
-            <input type="text" class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
+            <input type="text" name='phone' class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
           </div>
           <div class="header-input">
             <label class="header-input__label">Марка авто <span>*</span></label>
-            <select class="header-input__text select" id="select-car-1-header">
+            <select name='brand' class="header-input__text select" id="select-car-1-header">
               <option value="none">Выберите марку</option>
             </select>
           </div>
           <div class="header-input margin-30" id="select-car-2-header" style="display:none">
             <label class="header-input__label">Модель авто <span>*</span></label>
-            <select class="header-input__text select">
+            <select name='model' class="header-input__text select">
               <option value="none">Выберите модель</option>
             </select>
           </div>
@@ -198,7 +199,7 @@
           </label>
           <div class="header-input" style="display:none" id="select-car-3-header">
             <label class="header-input__label">Услуги <span>*</span></label>
-            <select class="header-input__text select">
+            <select name='services' class="header-input__text select">
               <option value="1">Выберите услугу</option>
               <option value="2">Пакет «Эконом»</option>
               <option value="3">Пакет «Стандарт»</option>
@@ -211,41 +212,42 @@
           </label>
           <div class="header-input" style="display:none" id="textarea-header">
             <label class="header-input__label">Примечание <span>*</span></label>
-            <textarea class="header-input__text header-input__textarea"></textarea>
+            <textarea name='comment' class="header-input__text header-input__textarea"></textarea>
           </div>
-          <button class="header-button" id='form-button-header'>Оставить заявку</button>
+          <button class="header-button" id='form-button-header' type='submit'>Оставить заявку</button>
           <label class="header-checkbox__small custom-checkbox input-checkbox">Согласен на
             <input type="checkbox" checked>
             <span class="checkmark"></span>
           </label>
           <span class='open-modal small'>обработку данных</span>
+        </form>
         </div>
-        <div class="col-lg-5 offset-lg-2 header-form form-success" style="display:none">
-          <div class="form-success__icon">
+        <div class="col-lg-5 offset-lg-2 header-form form-alt form-success" style="display:none">
+          <div class="form-alt__icon">
             <img src="./img/icons/success.svg" alt="">
           </div>
-          <div class="form-success__header">
+          <div class="form-alt__header">
             Спасибо!
           </div>
-          <div class="form-success__text">
+          <div class="form-alt__text">
             Ваша заявка принята, менеджер свяжется с вами в ближайшее время
           </div>
-          <button class="form-success__button">Отправить заново</button>
+          <button class="form-alt__button">Отправить заново</button>
         </div>
-        <div class="col-lg-5 offset-lg-2 header-form form-success form-fail" style="display:none">
-          <div class="form-success__icon">
+        <div class="col-lg-5 offset-lg-2 header-form form-alt form-fail" style="display:none">
+          <div class="form-alt__icon">
             <img src="./img/icons/warning.svg" alt="">
           </div>
-          <div class="form-success__header">
+          <div class="form-alt__header">
             Ошибка
           </div>
-          <div class="form-success__text">
+          <div class="form-alt__text">
             Форма не работает либо устала. Пожалуйста, свяжитесь с нами по номеру
           </div>
           <a class="form-fail__phone" href="tel:+8 495 123-45-67">
             +8 459 123-45-67
           </a>
-          <button class="form-success__button">Отправить заново</button>
+          <button class="form-alt__button">Отправить заново</button>
         </div>
       </div>
     </div>
@@ -504,7 +506,7 @@
                 <li><span>Пол багажника</span></li>
               </ul>
               <div class="prices-card__button">
-                <button>Заказать</button>
+                <button id='prices-2'>Заказать</button>
               </div>
             </div>
           </div>
@@ -523,7 +525,7 @@
                 <li><span>Потолок</span></li>
               </ul>
               <div class="prices-card__button">
-                <button>Заказать</button>
+                <button id='prices-3'>Заказать</button>
               </div>
             </div>
           </div>
@@ -543,7 +545,7 @@
                 <li><span>Задние крылья</span></li>
               </ul>
               <div class="prices-card__button">
-                <button>Заказать</button>
+                <button id='prices-4'>Заказать</button>
               </div>
             </div>
           </div>
@@ -877,16 +879,17 @@
           <div class="section-header ta-left">
             <h2>Расчитать стоимость шумоизоляции</h2>
           </div>
+          <form class='form-calc'>
           <div class="calc-form">
             <div class="header-input calc-input">
               <label class="header-input__label">Марка авто</label>
-              <select class="header-input__text select" id="select-car-1-calc">
+              <select name='brand' class="header-input__text select" id="select-car-1-calc">
                 <option value="none">Выберите марку</option>
               </select>
             </div>
             <div class="header-input calc-input" id="select-car-2-calc" style="display: none">
               <label class="header-input__label">Модель авто</label>
-              <select class="header-input__text select">
+              <select name='model' class="header-input__text select">
                 <option value="none">Выберите модель</option>
               </select>
             </div>
@@ -894,37 +897,38 @@
           <div class="calc-form">
             <div class="calc-form__half">
               <label class="header-checkbox custom-checkbox dark">Потолок (крыша) <span>от 6500 руб</span>
-                <input type="checkbox">
+                <input type="checkbox" name='roof'>
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Моторный щит <span>от 1000 руб</span>
-                <input type="checkbox">
+                <input type="checkbox" name='shield'>
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Багажник с крышкой <span>от 7000 руб</span>
-                <input type="checkbox">
+                <input type="checkbox" name='5000'>
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Капот <span>от 2000 руб</span>
-                <input type="checkbox">
+                <input type="checkbox" name='hood'>
                 <span class="checkmark"></span>
               </label>
             </div>
             <div class="calc-form__half">
               <label class="header-checkbox custom-checkbox dark">Дверь салона <span>от 2700 руб</span>
-                <input type="checkbox">
+                <input type="checkbox" name='door'>
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Колесная арка <span>от 2500 руб</span>
-                <input type="checkbox">
+                <input type="checkbox" name='arch'>
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Пол салона (днище) <span>от 9000 руб</span>
-                <input type="checkbox">
+                <input type="checkbox" name='floor'>
                 <span class="checkmark"></span>
               </label>
             </div>
           </div>
+          </form>
           <button class="header-button calc-button">Рассчитать стоимость</button>
         </div>
         <div class="col-lg-8 offset-lg-4 col-12 calc-inner calc-inner-2">
@@ -1230,27 +1234,28 @@
       </div>
       <div class="row contact-inner">
         <div class="col-lg-5 offset-lg-7 header-form form-main">
+          <form class='form'>
           <div class="contact-form__mobile mobile-show">
             <h3>Оставить заявку</h3>
             <div>Оставьте нам информацию о своей машине и мы свяжемся с вами в течение дня</div>
           </div>
           <div class="header-input dark input-name">
             <label class="header-input__label">Имя <span>*</span></label>
-            <input type="text" class="header-input__text" placeholder="Имя">
+            <input type="text" class="header-input__text" placeholder="Имя" name='name'>
           </div>
           <div class="header-input dark input-phone">
             <label class="header-input__label">Телефон <span>*</span></label>
-            <input type="text" class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
+            <input type="text" name='phone' class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
           </div>
           <div class="header-input dark">
             <label class="header-input__label">Марка авто <span>*</span></label>
-            <select class="header-input__text select" id="select-car-1-contact">
+            <select class="header-input__text select" name='brand' id="select-car-1-contact">
               <option value="none">Выберите марку</option>
             </select>
           </div>
           <div class="header-input margin-30 dark" style="display:none" id="select-car-2-contact">
             <label class="header-input__label">Модель авто <span>*</span></label>
-            <select class="header-input__text select">
+            <select name='model' class="header-input__text select">
               <option value="none">Выберите модель</option>
             </select>
           </div>
@@ -1260,7 +1265,7 @@
           </label>
           <div class="header-input dark" style="display:none" id="select-car-3-contact">
             <label class="header-input__label">Услуги <span>*</span></label>
-            <select class="header-input__text select">
+            <select name='services' class="header-input__text select">
               <option value="1">Выберите услугу</option>
               <option value="2">Пакет «Эконом»</option>
               <option value="3">Пакет «Стандарт»</option>
@@ -1273,41 +1278,42 @@
           </label>
           <div class="header-input dark" style="display:none" id="textarea-contact">
             <label class="header-input__label">Примечание <span>*</span></label>
-            <textarea class="header-input__text header-input__textarea"></textarea>
+            <textarea name='comment' class="header-input__text header-input__textarea"></textarea>
           </div>
-          <button class="header-button" id='form-button-contact'>Оставить заявку</button>
+          <button class="header-button" id='form-button-contact' type='submit'>Оставить заявку</button>
           <label class="header-checkbox__small custom-checkbox dark input-checkbox">Согласен на
             <input type="checkbox" checked>
             <span class="checkmark"></span>
           </label>
           <span class='open-modal small'>обработку данных</span>
+          </form>
         </div>
-        <div class="col-lg-5 offset-lg-7 header-form form-success" style="display:none">
-          <div class="form-success__icon">
+        <div class="col-lg-5 offset-lg-7 header-form form-alt form-success" style="display:none">
+          <div class="form-alt__icon">
             <img src="./img/icons/success.svg" alt="">
           </div>
-          <div class="form-success__header">
+          <div class="form-alt__header">
             Спасибо!
           </div>
-          <div class="form-success__text">
+          <div class="form-alt__text">
             Ваша заявка принята, менеджер свяжется с вами в ближайшее время
           </div>
-          <button class="form-success__button">Отправить заново</button>
+          <button class="form-alt__button">Отправить заново</button>
         </div>
-        <div class="col-lg-5 offset-lg-7 header-form form-success form-fail" style="display:none">
-          <div class="form-success__icon">
+        <div class="col-lg-5 offset-lg-7 header-form form-alt form-fail" style="display:none">
+          <div class="form-alt__icon">
             <img src="./img/icons/warning.svg" alt="">
           </div>
-          <div class="form-success__header">
+          <div class="form-alt__header">
             Ошибка
           </div>
-          <div class="form-success__text">
+          <div class="form-alt__text">
             Форма не работает либо устала. Пожалуйста, свяжитесь с нами по номеру
           </div>
           <a class="form-fail__phone" href="tel:+8 495 123-45-67">
             +8 495 123-45-67
           </a>
-          <button class="form-success__button">Отправить заново</button>
+          <button class="form-alt__button">Отправить заново</button>
         </div>
       </div>
     </div>
@@ -1794,13 +1800,14 @@
   <div class="modal modal-form">
     <div class="header-form__wrapper">
       <div class="header-form form-main">
+        <form class="form-modal">
         <div class="header-input input-name">
           <label class="header-input__label">Имя <span>*</span></label>
-          <input type="text" class="header-input__text" placeholder="Имя">
+          <input type="text" class="header-input__text" placeholder="Имя" name='name'>
         </div>
         <div class="header-input input-phone">
           <label class="header-input__label">Телефон <span>*</span></label>
-          <input type="text" class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
+          <input type="text" name='phone' class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
         </div>
         <button class="header-button" id='form-button-modal'>Оставить заявку</button>
         <label class="header-checkbox__small custom-checkbox input-checkbox">Согласен на
@@ -1808,33 +1815,34 @@
           <span class="checkmark"></span>
         </label>
         <span class='open-modal small'>обработку данных</span>
+        </form>
       </div>
-      <div class="header-form form-success" style="display:none">
-        <div class="form-success__icon">
+      <div class="header-form form-alt form-success" style="display:none">
+        <div class="form-alt__icon">
           <img src="./img/icons/success.svg" alt="">
         </div>
-        <div class="form-success__header">
+        <div class="form-alt__header">
           Спасибо!
         </div>
-        <div class="form-success__text">
+        <div class="form-alt__text">
           Ваша заявка принята, менеджер свяжется с вами в ближайшее время
         </div>
-        <button class="form-success__button">Отправить заново</button>
+        <button class="form-alt__button">Отправить заново</button>
       </div>
-      <div class="header-form form-success form-fail" style="display:none">
-        <div class="form-success__icon">
+      <div class="header-form form-alt form-fail" style="display:none">
+        <div class="form-alt__icon">
           <img src="./img/icons/warning.svg" alt="">
         </div>
-        <div class="form-success__header">
+        <div class="form-alt__header">
           Ошибка
         </div>
-        <div class="form-success__text">
+        <div class="form-alt__text">
           Форма не работает либо устала. Пожалуйста, свяжитесь с нами по номеру
         </div>
         <a class="form-fail__phone" href="tel:+8 495 123-45-67">
           +8 459 123-45-67
         </a>
-        <button class="form-success__button">Отправить заново</button>
+        <button class="form-alt__button">Отправить заново</button>
 
       </div>
       <div class="modal-overlay"></div>
