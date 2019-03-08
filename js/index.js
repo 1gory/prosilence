@@ -86,6 +86,31 @@ function validateForm(container) {
   return result;
 }
 
+function sendForm (container, data) {
+  $.ajax({
+    type: 'post',
+    url: '/order',
+    data: data,
+  })
+    .done(function (response) {
+      $(`.${container} .header-form .header-button`).removeAttr('disabled');
+
+      $.when($(`.${container} .header-form.form-main`).fadeOut())
+        .then(function () {
+          $(`.${container} .header-form.form-success`).fadeIn();
+        });
+    })
+    .fail(function (error) {
+      $(`.${container} .header-form .header-button`).removeAttr('disabled');
+
+      $.when($(`.${container} .header-form.form-main`).fadeOut())
+        .then(function () {
+          $(`.${container} .header-form.form-fail`).fadeIn();
+        });
+    });
+
+}
+
 $(document).ready(function () {
   fillBrandsSelects();
 
@@ -104,27 +129,7 @@ $(document).ready(function () {
       return;
     }
 
-    $.ajax({
-      type: 'post',
-      url: '/order',
-      data: $(this).serialize(),
-    })
-      .done(function (response) {
-        $(`.${container} .header-form .header-button`).removeAttr('disabled');
-
-        $.when($(`.${container} .header-form.form-main`).fadeOut())
-          .then(function () {
-            $(`.${container} .header-form.form-success`).fadeIn();
-          });
-      })
-      .fail(function (error) {
-        $(`.${container} .header-form .header-button`).removeAttr('disabled');
-
-        $.when($(`.${container} .header-form.form-main`).fadeOut())
-          .then(function () {
-            $(`.${container} .header-form.form-fail`).fadeIn();
-          });
-      });
+    sendForm(container, $(this).serialize());
   });
 
   $('.form-modal').on('submit', function (event) {
@@ -139,27 +144,7 @@ $(document).ready(function () {
       return;
     }
 
-    $.ajax({
-      type: 'post',
-      url: '/order',
-      data: $(this).serialize(),
-    })
-      .done(function (response) {
-        $(`.${container} .header-form .header-button`).removeAttr('disabled');
-
-        $.when($(`.${container} .header-form.form-main`).fadeOut())
-          .then(function () {
-            $(`.${container} .header-form.form-success`).fadeIn();
-          });
-      })
-      .fail(function (error) {
-        $(`.${container} .header-form .header-button`).removeAttr('disabled');
-
-        $.when($(`.${container} .header-form.form-main`).fadeOut())
-          .then(function () {
-            $(`.${container} .header-form.form-fail`).fadeIn();
-          });
-      });
+    sendForm(container, $(this).serialize());
   });
 
   $('body').on('click', '.button-up', () => {
