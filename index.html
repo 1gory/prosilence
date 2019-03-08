@@ -172,24 +172,24 @@
           </div>
         </div>
         <div class="col-lg-5 offset-lg-2 header-form form-main">
-          <form class='form'>
+          <form class="form">
           <div class="header-input input-name">
             <label class="header-input__label">Имя <span>*</span></label>
-            <input type="text" class="header-input__text" placeholder="Имя" name='name'>
+            <input type="text" class="header-input__text" placeholder="Имя" name="name">
           </div>
           <div class="header-input input-phone">
             <label class="header-input__label">Телефон <span>*</span></label>
-            <input type="text" name='phone' class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
+            <input type="text" name="phone" class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
           </div>
           <div class="header-input">
             <label class="header-input__label">Марка авто <span>*</span></label>
-            <select name='brand' class="header-input__text select" id="select-car-1-header">
+            <select name="brand" class="header-input__text select" id="select-car-1-header">
               <option value="none">Выберите марку</option>
             </select>
           </div>
           <div class="header-input margin-30" id="select-car-2-header" style="display:none">
             <label class="header-input__label">Модель авто <span>*</span></label>
-            <select name='model' class="header-input__text select">
+            <select name="model" class="header-input__text select">
               <option value="none">Выберите модель</option>
             </select>
           </div>
@@ -199,7 +199,7 @@
           </label>
           <div class="header-input" style="display:none" id="select-car-3-header">
             <label class="header-input__label">Услуги <span>*</span></label>
-            <select name='services' class="header-input__text select">
+            <select name="services" class="header-input__text select">
               <option value="none">Выберите услугу</option>
               <option value="econom">Пакет «Эконом»</option>
               <option value="standart">Пакет «Стандарт»</option>
@@ -212,14 +212,14 @@
           </label>
           <div class="header-input" style="display:none" id="textarea-header">
             <label class="header-input__label">Примечание <span>*</span></label>
-            <textarea name='comment' class="header-input__text header-input__textarea"></textarea>
+            <textarea name="comment" class="header-input__text header-input__textarea"></textarea>
           </div>
-          <button class="header-button" id='form-button-header' type='submit'>Оставить заявку</button>
+          <button class="header-button" id="form-button-header" type="submit">Оставить заявку</button>
           <label class="header-checkbox__small custom-checkbox input-checkbox">Согласен на
             <input type="checkbox" checked>
             <span class="checkmark"></span>
           </label>
-          <span class='open-modal small'>обработку данных</span>
+          <span class="open-modal small">обработку данных</span>
         </form>
         </div>
         <div class="col-lg-5 offset-lg-2 header-form form-alt form-success" style="display:none">
@@ -506,7 +506,7 @@
                 <li><span>Пол багажника</span></li>
               </ul>
               <div class="prices-card__button">
-                <button id='prices-2'>Заказать</button>
+                <button data-price="econom">Заказать</button>
               </div>
             </div>
           </div>
@@ -525,7 +525,7 @@
                 <li><span>Потолок</span></li>
               </ul>
               <div class="prices-card__button">
-                <button id='prices-3'>Заказать</button>
+                <button data-price="standart">Заказать</button>
               </div>
             </div>
           </div>
@@ -545,7 +545,7 @@
                 <li><span>Задние крылья</span></li>
               </ul>
               <div class="prices-card__button">
-                <button id='prices-4'>Заказать</button>
+                <button data-price="premium">Заказать</button>
               </div>
             </div>
           </div>
@@ -879,17 +879,17 @@
           <div class="section-header ta-left">
             <h2>Расчитать стоимость шумоизоляции</h2>
           </div>
-          <form class='form-calc'>
+          <form class="form-calc">
           <div class="calc-form">
             <div class="header-input calc-input">
               <label class="header-input__label">Марка авто</label>
-              <select name='brand' class="header-input__text select" id="select-car-1-calc">
+              <select name="brand" class="header-input__text select" id="select-car-1-calc">
                 <option value="none">Выберите марку</option>
               </select>
             </div>
             <div class="header-input calc-input" id="select-car-2-calc" style="display: none">
               <label class="header-input__label">Модель авто</label>
-              <select name='model' class="header-input__text select">
+              <select name="model" class="header-input__text select">
                 <option value="none">Выберите модель</option>
               </select>
             </div>
@@ -897,33 +897,33 @@
           <div class="calc-form">
             <div class="calc-form__half">
               <label class="header-checkbox custom-checkbox dark">Потолок (крыша) <span>от 6500 руб</span>
-                <input type="checkbox" name='roof'>
+                <input type="checkbox" name="roof">
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Моторный щит <span>от 1000 руб</span>
-                <input type="checkbox" name='shield'>
+                <input type="checkbox" name="shield">
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Багажник с крышкой <span>от 7000 руб</span>
-                <input type="checkbox" name='5000'>
+                <input type="checkbox" name="trunk">
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Капот <span>от 2000 руб</span>
-                <input type="checkbox" name='hood'>
+                <input type="checkbox" name="hood">
                 <span class="checkmark"></span>
               </label>
             </div>
             <div class="calc-form__half">
               <label class="header-checkbox custom-checkbox dark">Дверь салона <span>от 2700 руб</span>
-                <input type="checkbox" name='door'>
+                <input type="checkbox" name="door">
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Колесная арка <span>от 2500 руб</span>
-                <input type="checkbox" name='arch'>
+                <input type="checkbox" name="arch">
                 <span class="checkmark"></span>
               </label>
               <label class="header-checkbox custom-checkbox dark">Пол салона (днище) <span>от 9000 руб</span>
-                <input type="checkbox" name='floor'>
+                <input type="checkbox" name="floor">
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -953,7 +953,7 @@
             <input type="checkbox" checked>
             <span class="checkmark"></span>
           </label>
-          <span class='open-modal small'>обработку данных</span>
+          <span class="open-modal small">обработку данных</span>
         </div>
         <div class="calc-inner-2 calc-back">
           <img src="./img/icons/arrow-slim-left.svg" alt="">
@@ -1198,23 +1198,23 @@
       <div class="container feedback-swiper swiper-container">
         <div class="row feedback-row slick-fb swiper-wrapper">
           <div class="col-lg-4 col-12 feedback-card swiper-slide">
-            <video class="video-js vjs-default-skin" width="320px" controls preload="none" poster='./img/autoservice.jpg'>
-              <source src="./img/video.mp4" type='video/mp4' />
+            <video class="video-js vjs-default-skin" width="320px" controls preload="none" poster="./img/autoservice.jpg">
+              <source src="./img/video.mp4" type="video/mp4" />
             </video>
           </div>
           <div class="col-lg-4 col-12 feedback-card swiper-slide">
-            <video class="video-js vjs-default-skin" width="320px" controls preload="none" poster='./img/autoservice.jpg'>
-              <source src="./img/video.mp4" type='video/mp4' />
+            <video class="video-js vjs-default-skin" width="320px" controls preload="none" poster="./img/autoservice.jpg">
+              <source src="./img/video.mp4" type="video/mp4" />
             </video>
           </div>
           <div class="col-lg-4 col-12 feedback-card swiper-slide">
-            <video class="video-js vjs-default-skin" width="320px" controls preload="none" poster='./img/autoservice.jpg'>
-              <source src="./img/video.mp4" type='video/mp4' />
+            <video class="video-js vjs-default-skin" width="320px" controls preload="none" poster="./img/autoservice.jpg">
+              <source src="./img/video.mp4" type="video/mp4" />
             </video>
           </div>
           <div class="col-lg-4 col-12 feedback-card swiper-slide">
-            <video class="video-js vjs-default-skin" width="320px" controls preload="none" poster='./img/autoservice.jpg'>
-              <source src="./img/video.mp4" type='video/mp4' />
+            <video class="video-js vjs-default-skin" width="320px" controls preload="none" poster="./img/autoservice.jpg">
+              <source src="./img/video.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -1234,28 +1234,28 @@
       </div>
       <div class="row contact-inner">
         <div class="col-lg-5 offset-lg-7 header-form form-main">
-          <form class='form'>
+          <form class="form">
           <div class="contact-form__mobile mobile-show">
             <h3>Оставить заявку</h3>
             <div>Оставьте нам информацию о своей машине и мы свяжемся с вами в течение дня</div>
           </div>
           <div class="header-input dark input-name">
             <label class="header-input__label">Имя <span>*</span></label>
-            <input type="text" class="header-input__text" placeholder="Имя" name='name'>
+            <input type="text" class="header-input__text" placeholder="Имя" name="name">
           </div>
           <div class="header-input dark input-phone">
             <label class="header-input__label">Телефон <span>*</span></label>
-            <input type="text" name='phone' class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
+            <input type="text" name="phone" class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
           </div>
           <div class="header-input dark">
             <label class="header-input__label">Марка авто <span>*</span></label>
-            <select class="header-input__text select" name='brand' id="select-car-1-contact">
+            <select class="header-input__text select" name="brand" id="select-car-1-contact">
               <option value="none">Выберите марку</option>
             </select>
           </div>
           <div class="header-input margin-30 dark" style="display:none" id="select-car-2-contact">
             <label class="header-input__label">Модель авто <span>*</span></label>
-            <select name='model' class="header-input__text select">
+            <select name="model" class="header-input__text select">
               <option value="none">Выберите модель</option>
             </select>
           </div>
@@ -1265,7 +1265,7 @@
           </label>
           <div class="header-input dark" style="display:none" id="select-car-3-contact">
             <label class="header-input__label">Услуги <span>*</span></label>
-            <select name='services' class="header-input__text select">
+            <select name="services" class="header-input__text select">
               <option value="none">Выберите услугу</option>
               <option value="econom">Пакет «Эконом»</option>
               <option value="standart">Пакет «Стандарт»</option>
@@ -1278,14 +1278,14 @@
           </label>
           <div class="header-input dark" style="display:none" id="textarea-contact">
             <label class="header-input__label">Примечание <span>*</span></label>
-            <textarea name='comment' class="header-input__text header-input__textarea"></textarea>
+            <textarea name="comment" class="header-input__text header-input__textarea"></textarea>
           </div>
-          <button class="header-button" id='form-button-contact' type='submit'>Оставить заявку</button>
+          <button class="header-button" id="form-button-contact" type="submit">Оставить заявку</button>
           <label class="header-checkbox__small custom-checkbox dark input-checkbox">Согласен на
             <input type="checkbox" checked>
             <span class="checkmark"></span>
           </label>
-          <span class='open-modal small'>обработку данных</span>
+          <span class="open-modal small">обработку данных</span>
           </form>
         </div>
         <div class="col-lg-5 offset-lg-7 header-form form-alt form-success" style="display:none">
@@ -1694,7 +1694,7 @@
 
     function initMap() {
       const image = {
-        url: './img/icons/Evericons-used/pin-white.svg',
+        url: "./img/icons/Evericons-used/pin-white.svg",
         size: new google.maps.Size(48, 48),
         scaledSize: new google.maps.Size(48, 48)
       };
@@ -1803,18 +1803,19 @@
         <form class="form-modal">
         <div class="header-input input-name">
           <label class="header-input__label">Имя <span>*</span></label>
-          <input type="text" class="header-input__text" placeholder="Имя" name='name'>
+          <input type="text" class="header-input__text" placeholder="Имя" name="name">
         </div>
         <div class="header-input input-phone">
           <label class="header-input__label">Телефон <span>*</span></label>
-          <input type="text" name='phone' class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
+          <input type="text" name="phone" class="header-input__text header-input__phone" placeholder="+7 ___ ___ __ __">
         </div>
-        <button class="header-button" id='form-button-modal'>Оставить заявку</button>
+        <button class="header-button" id="form-button-modal">Оставить заявку</button>
         <label class="header-checkbox__small custom-checkbox input-checkbox">Согласен на
           <input type="checkbox" checked>
           <span class="checkmark"></span>
         </label>
-        <span class='open-modal small'>обработку данных</span>
+        <span class="open-modal small">обработку данных</span>
+        <div class="hidden-inputs"></div>
         </form>
       </div>
       <div class="header-form form-alt form-success" style="display:none">
@@ -1858,7 +1859,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjzyu8mDsvRp7WudZ8uDP5tdjcttFD3mM&callback=initMap"
     async defer></script>
-  <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+  <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
   <script src="./js/prices.js"></script>
   <script src="./static/app.bundle.js"></script>
 </body>

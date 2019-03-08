@@ -86,8 +86,6 @@ function validateForm(container) {
   return result;
 }
 
-let modalFormTarget = '';
-
 $(document).ready(function () {
   fillBrandsSelects();
 
@@ -141,29 +139,10 @@ $(document).ready(function () {
       return;
     }
 
-    let serializedData = $(this).serialize();
-
-    switch (modalFormTarget) {
-      case 'prices-2':
-        serializedData += '&services=2';
-        break;
-      case 'prices-3':
-        serializedData += '&services=3';
-        break;
-      case 'prices-4':
-        serializedData += '&services=4';
-        break;
-      case 'calc':
-        serializedData += `&${$('.form-calc').serialize()}`;
-        break;
-      default:
-        break;
-    }
-
     $.ajax({
       type: 'post',
       url: '/order',
-      data: serializedData,
+      data: $(this).serialize(),
     })
       .done(function (response) {
         $(`.${container} .header-form .header-button`).removeAttr('disabled');
@@ -230,7 +209,15 @@ $(document).ready(function () {
   });
 
   $('.calc-button').on('click', function () {
-    modalFormTarget = 'calc';
+    $('.modal-form .hidden-inputs').html('');
+    $('.form-calc input').each(function () {
+      if ($(this).is(':checked')) {
+        $('.modal-form .hidden-inputs').append(`<input type="hidden" name="${$(this).attr('name')}" value="true">`);
+      }
+    });
+    $('.form-calc select').each(function () {
+      $('.modal-form .hidden-inputs').append(`<input type="hidden" name="${$(this).attr('name')}" value="${$(this).val()}">`);
+    });
     $('.modal-form').fadeIn();
   });
 
@@ -241,7 +228,8 @@ $(document).ready(function () {
   });
 
   $('.prices-card__button button').on('click', function () {
-    modalFormTarget = $(this).attr('id');
+    $('.modal-form .hidden-inputs').html('');
+    $('.modal-form .hidden-inputs').append(`<input type="hidden" name="services" value="${$(this).attr('data-price')}">`);
     $('.modal-form').fadeIn();
   });
 
