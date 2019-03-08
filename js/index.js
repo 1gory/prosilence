@@ -4,17 +4,18 @@ const examplePhotos = require('./examples.js').default;
 let priceSwiper;
 let feedbackSwiper;
 
-function fillFirstSelects() {
-  carObj.forEach((e, index) => {
-    $('#select-car-1-header').append(`<option value="${index}">${e.name}</option>`);
-    $('#select-car-1-contact').append(`<option value="${index}">${e.name}</option>`);
-    $('#select-car-1-calc').append(`<option value="${index}">${e.name}</option>`);
+function fillBrandsSelects() {
+  carObj.forEach((e) => {
+    $('#select-car-1-header').append(`<option value="${e.name}">${e.name}</option>`);
+    $('#select-car-1-contact').append(`<option value="${e.name}">${e.name}</option>`);
+    $('#select-car-1-calc').append(`<option value="${e.name}">${e.name}</option>`);
   });
 }
 
-function fillSecondSelect(selector, index) {
+function fillModelSelect(selector, val) {
   $(selector).html('<option value="none">Выберите модель</option>');
-  carObj[index].types.forEach((e) => {
+  const brand = carObj.find(item => (item.name === val));
+  brand.types.forEach((e) => {
     $(selector).append(`<option value="${e}">${e}</option>`);
   });
 }
@@ -88,7 +89,7 @@ function validateForm(container) {
 let modalFormTarget = '';
 
 $(document).ready(function () {
-  fillFirstSelects();
+  fillBrandsSelects();
 
   fillCarTabs();
 
@@ -97,9 +98,7 @@ $(document).ready(function () {
   $('.form').on('submit', function (event) {
     event.preventDefault();
     event.stopImmediatePropagation();
-    console.log($(this))
     const container = $(this).children('.header-button').attr('id').split('-')[2];
-
     const validation = validateForm(container);
 
     if (!validation) {
@@ -308,7 +307,7 @@ $(document).ready(function () {
 
   $('#select-car-1-header').on('change', () => {
     if ($('#select-car-1-header').find('option:selected').val() !== 'none') {
-      fillSecondSelect('#select-car-2-header select', $('#select-car-1-header').find('option:selected').val());
+      fillModelSelect('#select-car-2-header select', $('#select-car-1-header').find('option:selected').val());
       $('#select-car-2-header').fadeIn();
     } else {
       $('#select-car-2-header').fadeOut();
@@ -334,7 +333,7 @@ $(document).ready(function () {
   $('#select-car-1-contact').on('change', () => {
     if ($('#select-car-1-contact').find(':selected').val() !== 'none') {
       $('#select-car-2-contact').fadeIn();
-      fillSecondSelect('#select-car-2-contact select', $('#select-car-1-contact').find('option:selected').val());
+      fillModelSelect('#select-car-2-contact select', $('#select-car-1-contact').find('option:selected').val());
     } else {
       $('#select-car-2-contact').fadeOut();
     }
@@ -359,7 +358,7 @@ $(document).ready(function () {
   $('#select-car-1-calc').on('change', () => {
     if ($('#select-car-1-calc').find(':selected').val() !== 'none') {
       $('#select-car-2-calc').fadeIn();
-      fillSecondSelect('#select-car-2-calc select', $('#select-car-1-calc').find('option:selected').val());
+      fillModelSelect('#select-car-2-calc select', $('#select-car-1-calc').find('option:selected').val());
     } else {
       $('#select-car-2-calc').fadeOut();
     }
