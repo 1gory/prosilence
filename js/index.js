@@ -89,7 +89,7 @@ function validateForm(container) {
 function sendForm (container, data) {
   $.ajax({
     type: 'post',
-    url: '/order',
+    url: '/server/order.php',
     data: data,
   })
     .done(function (response) {
