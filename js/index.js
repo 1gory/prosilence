@@ -86,29 +86,36 @@ function validateForm(container) {
   return result;
 }
 
-function sendForm (container, data) {
+function sendForm(container, data) {
+  const handleError = (error) => {
+    console.log(error);
+    $(`.${container} .header-form .header-button`).removeAttr('disabled');
+
+    $.when($(`.${container} .header-form.form-main`).fadeOut())
+      .then(() => {
+        $(`.${container} .header-form.form-fail`).fadeIn();
+      });
+  };
+
   $.ajax({
     type: 'post',
-    url: '/order',
-    data: data,
+    url: '/server/order.php',
+    data,
   })
-    .done(function (response) {
+    .done((response) => {
+      if (response.status === 'error') {
+        return handleError(response.status);
+      }
       $(`.${container} .header-form .header-button`).removeAttr('disabled');
 
       $.when($(`.${container} .header-form.form-main`).fadeOut())
-        .then(function () {
+        .then(() => {
           $(`.${container} .header-form.form-success`).fadeIn();
         });
+
+      return null;
     })
-    .fail(function (error) {
-      $(`.${container} .header-form .header-button`).removeAttr('disabled');
-
-      $.when($(`.${container} .header-form.form-main`).fadeOut())
-        .then(function () {
-          $(`.${container} .header-form.form-fail`).fadeIn();
-        });
-    });
-
+    .fail(handleError);
 }
 
 $(document).ready(function () {
@@ -136,7 +143,6 @@ $(document).ready(function () {
     event.preventDefault();
     event.stopImmediatePropagation();
     const container = $(this).children('.header-button').attr('id').split('-')[2];
-
     const validation = validateForm(container);
 
     if (!validation) {

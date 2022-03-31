@@ -131,4 +131,8 @@ $date = "
 $mail->Subject = 'Заявка';
 $mail->Body = "	<table style='width: 100%;'>$date $name $phone $email $type $services $options $comment</table> ";
 
-$mail->send();
+if($mail->send()){
+    echo '{ "status": "success" }';
+} else {
+    echo '{ "status": "error" }';
+}

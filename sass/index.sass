@@ -172,6 +172,8 @@ body
     padding: 23px
     margin-top: 10px
     margin-bottom: 20px
+    &:disabled
+      opacity: .7
   &-text
     font-family: 'Oswald-Medium', sans-serif
     font-size: 48px
@@ -591,8 +593,8 @@ body
   &-card
     position: relative
     margin-bottom: 30px
-    box-shadow: 0 7px 15px 0 rgba(1,1,1,0.1)
     &__image
+      box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1)
       height: 260px
       width: 100%
       object-fit: cover
