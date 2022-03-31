@@ -238,9 +238,7 @@ body {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.header-button:disabled {
-  opacity: 0.7;
-}
+
 .header-text {
   font-family: "Oswald-Medium", sans-serif;
   font-size: 48px;
@@ -861,6 +859,8 @@ body {
 .material-card {
   position: relative;
   margin-bottom: 30px;
+  -webkit-box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1);
+          box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1);
 }
 .material-card__image {
   box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1);
